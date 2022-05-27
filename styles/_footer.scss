@@ -1,0 +1,48 @@
+footer {
+    margin-top: 6rem;
+    background-color: $blue;
+    padding: 1.5rem 3rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+        margin: 0 3rem;
+        text-align: center;
+        color: $light;
+    }
+
+    .footer_contacto {
+
+        h5 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            li {
+                transition: 0.2s all;
+                color: $light;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                margin: 0.3rem 0;
+
+                &:hover {
+                    color: $dark;
+                }
+            }
+
+            i {
+                margin-right: 0.1rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+}

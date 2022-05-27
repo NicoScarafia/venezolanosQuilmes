@@ -1,0 +1,61 @@
+#about {
+    padding-top: 3rem;
+
+    h2 {
+        @include HomeTitle;
+        padding-left: 6rem;
+    }
+
+    .about_subheading {
+        width: 30rem;
+        font-size: 1.3rem;
+        line-height: 1.35rem;
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    .about_content {
+        position: relative;
+
+        .about_image {
+            width: 100%;
+            height: 20rem;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .about_text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6rem;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            width: 45rem;
+            line-height: 1.6rem;
+            background-color: $light;
+        }
+
+    }
+
+
+    .about_link {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+
+        a {
+            @include CustomButton;
+        }
+    }
+
+}

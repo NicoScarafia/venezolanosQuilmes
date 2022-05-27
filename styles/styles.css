@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Signika Negative", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8rem;
+  background-color: #f14143;
+  max-height: 5rem;
+}
+
+.navbar .link-left, .navbar .link-right {
+  text-align: center;
+  color: #feee4e;
+  font-size: 1.2rem;
+  margin: 0 1.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  font-weight: 600;
+}
+
+.navbar .link-left::after, .navbar .link-right::after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #e7e4d3;
+  width: 100%;
+  height: 0.12rem;
+  border-radius: 0.5rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.navbar .link-left:hover, .navbar .link-right:hover {
+  color: #e7e4d3;
+}
+
+.navbar .link-left:hover::after, .navbar .link-right:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.navbar .link-left:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.navbar .main-logo {
+  width: 4rem;
+  margin: 0 2rem;
+}
+
+.hero-section {
+  width: 100%;
+  min-height: 22rem;
+  height: 60vh;
+  background-color: #0a5aa2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.hero-section .hero-logo {
+  width: 15rem;
+  margin-top: -2rem;
+  margin-right: -3.5rem;
+}
+
+.hero-section .hero-logo img {
+  width: 100%;
+}
+
+.hero-section h1 {
+  font-family: "Merienda One", cursive;
+  font-size: 3.2rem;
+  line-height: 3rem;
+  color: white;
+  letter-spacing: -0.3rem;
+  margin-top: -1rem;
+}
+
+.hero-section h1 .venezolanos {
+  font-size: 6rem;
+  background: url("../assets/img/bandera-venezuela-2.jpg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: -5px;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section h1 .quilmes {
+  font-size: 6rem;
+  background: url("../assets/img/bandera-argentina.jpg");
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: -8px;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section h1 .somos {
+  margin-left: 6rem;
+}
+
+.hero-section h1 .second-line {
+  margin-left: 10rem;
+}
+
+.whatsapp-button {
+  position: fixed;
+  top: 82vh;
+  right: 4vw;
+  z-index: 10000;
+  padding: 0.8rem;
+  border: 0.12rem solid #e7e4d3;
+  background-color: #1fb055;
+  border-radius: 50%;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.whatsapp-button i {
+  color: white;
+  font-size: 2rem;
+}
+
+.whatsapp-button:hover {
+  background-color: #178540;
+}
+
+#about {
+  padding-top: 3rem;
+}
+
+#about h2 {
+  font-family: "Signika Negative", sans-serif;
+  color: #141720;
+  font-size: 3.3rem;
+  letter-spacing: -0.1rem;
+  padding-left: 6rem;
+}
+
+#about .about_subheading {
+  width: 30rem;
+  font-size: 1.3rem;
+  line-height: 1.35rem;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+#about .about_content {
+  position: relative;
+}
+
+#about .about_content .about_image {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+}
+
+#about .about_content .about_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#about .about_content .about_text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  width: 45rem;
+  line-height: 1.6rem;
+  background-color: #e7e4d3;
+}
+
+#about .about_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 7rem;
+}
+
+#about .about_link a {
+  width: 7rem;
+  background-color: #f14143;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#about .about_link a:hover {
+  color: #e7e4d3;
+  background-color: #0a5aa2;
+}
+
+#actividades, #actividades_page_section {
+  margin: 4rem auto;
+  background-color: #0a5aa2;
+  padding: 2rem 0;
+}
+
+#actividades h2, #actividades_page_section h2 {
+  font-family: "Signika Negative", sans-serif;
+  color: #141720;
+  font-size: 3.3rem;
+  letter-spacing: -0.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+#actividades .actividades_content, #actividades_page_section .actividades_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 3rem;
+}
+
+#actividades .actividades_link, #actividades_page_section .actividades_link {
+  margin: 1.5rem auto;
+  width: 7rem;
+  background-color: #f14143;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#actividades .actividades_link:hover, #actividades_page_section .actividades_link:hover {
+  color: #e7e4d3;
+  background-color: #feee4e;
+}
+
+#actividades .actividades_link a, #actividades_page_section .actividades_link a {
+  color: white;
+  font-weight: 500;
+}
+
+#actividades .actividades_link a:hover, #actividades_page_section .actividades_link a:hover {
+  color: black;
+}
+
+#actividades .actividades_card, #actividades_page_section .actividades_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  margin: 1rem auto;
+  width: 35rem;
+  height: 23rem;
+  background-color: #e2e2e2;
+  padding: 1rem 1.8rem;
+  border-radius: 1.5rem;
+}
+
+#actividades .actividades_card .card_image, #actividades_page_section .actividades_card .card_image {
+  min-width: 11rem;
+  height: 100%;
+  margin-right: 1.5rem;
+}
+
+#actividades .actividades_card .card_image img, #actividades_page_section .actividades_card .card_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#actividades .actividades_card .card_text .card_heading, #actividades_page_section .actividades_card .card_text .card_heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#actividades .actividades_card .card_text .card_date, #actividades_page_section .actividades_card .card_text .card_date {
+  margin: 0.8rem 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.88rem;
+  color: #636363;
+  font-weight: 600;
+}
+
+#actividades .actividades_card .card_text .card_date i, #actividades_page_section .actividades_card .card_text .card_date i {
+  margin-right: 0.2rem;
+}
+
+#actividades .actividades_card .card_text .card_main-text, #actividades_page_section .actividades_card .card_text .card_main-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+
+#actividades .actividades_card .card_text .card_link, #actividades_page_section .actividades_card .card_text .card_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+#actividades .actividades_card .card_text .card_link i, #actividades_page_section .actividades_card .card_text .card_link i {
+  background-color: #0a5aa2;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+#actividades .actividades_card .card_text .card_link i:hover, #actividades_page_section .actividades_card .card_text .card_link i:hover {
+  background-color: #f14143;
+}
+
+#redes {
+  padding: 0 10rem;
+}
+
+#redes h2 {
+  font-family: "Signika Negative", sans-serif;
+  color: #141720;
+  font-size: 3.3rem;
+  letter-spacing: -0.1rem;
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+#redes .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#redes a {
+  color: white;
+  padding: 0.5rem;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  border-radius: 0.5rem;
+}
+
+#redes a i {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+#redes a span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#redes a:hover {
+  color: #141720;
+}
+
+#redes .red-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0.5rem 1rem;
+  min-width: 18rem;
+  border-radius: 0.5rem;
+  height: 8rem;
+  border: 0.15rem solid #c9c9c9;
+}
+
+#redes .instagram {
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+#redes .facebook {
+  background: linear-gradient(120deg, #3b5998, #7fa1ea);
+}
+
+footer {
+  margin-top: 6rem;
+  background-color: #0a5aa2;
+  padding: 1.5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer div {
+  margin: 0 3rem;
+  text-align: center;
+  color: #e7e4d3;
+}
+
+footer .footer_contacto h5 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .footer_contacto a li {
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  color: #e7e4d3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0.3rem 0;
+}
+
+footer .footer_contacto a li:hover {
+  color: #141720;
+}
+
+footer .footer_contacto a i {
+  margin-right: 0.1rem;
+}
+
+footer .footer_contacto ul {
+  list-style: none;
+}
+
+#main_about h1 {
+  text-transform: uppercase;
+  color: #141720;
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem auto 2rem auto;
+}
+
+#main_about .about_intro {
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  max-width: 38rem;
+  background-color: #feee4e;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+#main_about .about_intro p {
+  font-size: 1.15rem;
+  text-align: center;
+  color: #141720;
+}
+
+#main_about .about_intro em {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#main_about section {
+  margin: 2.45rem auto;
+  padding: 0 5rem;
+  max-width: 1100px;
+}
+
+#main_about h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: #f14143;
+}
+
+#main_about p, #main_about li {
+  font-size: 1.08rem;
+  text-align: justify;
+  line-height: 1.7rem;
+}
+
+#main_about li {
+  margin-left: 1rem;
+}
+
+#main_about .about_mision .mision_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -1rem;
+}
+
+#main_about .about_mision .mision_content .mision_image {
+  width: 45rem;
+  height: 15rem;
+  margin-left: 2rem;
+  outline: 0.2rem solid #e7e4d3;
+  border-radius: 0.5rem;
+}
+
+#main_about .about_mision .mision_content .mision_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+#main_about .about_comision {
+  margin-top: 4rem;
+}
+
+#main_about .about_comision h2 {
+  color: #f14143;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main_about .about_comision i {
+  font-size: 1.4rem;
+  color: white;
+  background-color: #f14143;
+  padding: 0.7rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+#main_about .about_comision .comision_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+}
+
+#main_about .about_comision .comision_content .comision_persona {
+  margin-bottom: 1.1rem;
+  margin-left: 4rem;
+}
+
+#main_about .about_comision .comision_content .comision_persona .persona_nombre {
+  text-transform: uppercase;
+  font-size: 1.12rem;
+  color: #323232;
+  font-weight: 700;
+}
+
+#main_about .about_comision .comision_content .comision_persona .persona_cargo {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #676767;
+}
+
+#main_about .about_comision .comision_content .comision_image {
+  width: 25rem;
+  margin-top: -1rem;
+  outline: 0.2rem solid #e7e4d3;
+  border-radius: 0.5rem;
+}
+
+#main_about .about_comision .comision_content .comision_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+  border-radius: 0.5rem;
+}
+
+#main_actividades h1 {
+  text-transform: uppercase;
+  color: #141720;
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem auto 2rem auto;
+}
+
+#main_actividades #actividades_page_section {
+  background-color: white;
+  margin: -2rem auto;
+}
+/*# sourceMappingURL=styles.css.map */

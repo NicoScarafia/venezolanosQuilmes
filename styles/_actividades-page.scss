@@ -1,0 +1,10 @@
+#main_actividades {
+    h1 {
+        @include PageTitle
+    }
+
+    #actividades_page_section {
+        background-color: white;
+        margin: -2rem auto;
+    }
+}

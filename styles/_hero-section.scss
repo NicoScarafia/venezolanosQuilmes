@@ -1,0 +1,60 @@
+.hero-section {
+    width: 100%;
+    min-height: 22rem;
+    height: 60vh;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .hero-logo {
+        width: 15rem;
+        margin-top: -2rem;
+        margin-right: -3.5rem;
+        img {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        font-family: $accent-font;
+        font-size: 3.2rem;
+        line-height: 3rem;
+        color: white;
+        letter-spacing: -0.3rem;
+        margin-top: -1rem;
+
+        .venezolanos {
+            font-size: 6rem;
+            background: url('../assets/img/bandera-venezuela-2.jpg');
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: -5px;
+            background-repeat: no-repeat;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .quilmes {
+            font-size: 6rem;
+            background: url('../assets/img/bandera-argentina.jpg');
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: -8px;
+            background-repeat: no-repeat;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .somos {
+            margin-left: 6rem;
+        }
+
+        .second-line {
+            margin-left: 10rem;
+        }
+    }
+}
