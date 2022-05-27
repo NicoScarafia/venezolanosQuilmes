@@ -3,12 +3,15 @@ $dark: #141720;
 $blue: #0a5aa2;
 $red: #f14143;
 $yellow: #feee4e;
-$light: #e7e4d3;
+$light: #e7d7d3;
+
+//borders
+$b: 1px solid black; // borde de pruebas
 
 // Fonts
 $accent-font: 'Merienda One', cursive;
 $main-font: 'Signika Negative', sans-serif;
-$text-font: 'Plus Jakarta Sans', sans-serif;
+$text-font: 'Roboto', sans-serif;
 
 // Mixins
 
@@ -27,7 +30,7 @@ $text-font: 'Plus Jakarta Sans', sans-serif;
     margin: 3rem auto 2rem auto;
 }
 
-@mixin Opacity($opacityNumber: 80%) {
+@mixin Opacity( $opacityNumber:80% ) {
     opacity: $opacityNumber;
     -moz-opacity: $opacityNumber;
     -webkit-opacity: $opacityNumber;

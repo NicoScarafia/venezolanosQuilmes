@@ -1,13 +1,23 @@
 #actividades, #actividades_page_section {
-    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
     background-color: $blue;
-    padding: 2rem 0;
+    padding: 2.3rem 0;
 
     h2 {
         @include HomeTitle;
         margin-bottom: 1.5rem;
         text-align: center;
         color: white;
+    }
+
+    .carga { 
+        justify-items: center;
+        text-align: start;
+        width: 20rem;
+        margin-top: 3rem;
     }
 
     .actividades_content {
@@ -34,13 +44,13 @@
 
     .actividades_card {
         display: flex;
-        justify-content: center;
-        align-items: space-around;
+        justify-content: space-around;
+        align-items: flex-start;
         margin: 1rem auto;
 
         width: 35rem; height: 23rem;
 
-        background-color: rgb(226, 226, 226);
+        background-color: whitesmoke;
         padding: 1rem 1.8rem;
 
         border-radius: 1.5rem;
@@ -56,7 +66,12 @@
         }
 
         .card_text {
+            display: flex;
+            flex-direction: column;
+            
+
             .card_heading {
+                height: 3rem;
                 font-size: 1.3rem;
                 font-weight: 600;
             }
@@ -78,10 +93,15 @@
                 font-weight: 500;
                 line-height: 1.4rem;
                 text-align: justify;
+
+                .verMas {
+                    text-decoration: underline;
+                    color: $blue;
+                }
             }
             .card_link {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: end;
                 font-size: 1.1rem;
                 margin-top: 0.5rem;
                 
@@ -96,6 +116,10 @@
                         background-color: $red;
                     }
                 }
+            }
+
+            .del {
+                display: none;
             }
         }
     }

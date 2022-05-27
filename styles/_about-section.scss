@@ -54,8 +54,57 @@
         margin-top: 7rem;
 
         a {
-            @include CustomButton;
+            width: 7rem;
+            background-color: $red;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: white;
+            text-align: center;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $light;
+                background-color: $blue;
+            }
         }
     }
 
+
+
 }
+
+
+// .expert-content-image {
+//     width: 100%;
+//     height: 16rem;
+
+//     img {
+//       width: 100%; height: 100%;
+//       object-fit: cover;
+//       object-position: 0 -15rem;
+//       opacity: 95%;
+//     }
+//   }
+
+//   .expert-content-text {
+//     max-width: 55rem;
+//     background-color: rgb(255, 255, 255);
+//     padding: 0.5rem 2rem;
+//     margin-top: -4rem;
+//     z-index: 2;
+
+//     p {
+//       margin: 0.7rem 0;
+//       text-align: justify;
+//       line-height: 1.5rem;
+//     }
+
+//     .second-paragraph {
+//       font-weight: 600;
+//       text-align: center;
+//       font-family: $accent-font;
+//       line-height: 1.6rem;
+//     }
+//   }
+
+// }

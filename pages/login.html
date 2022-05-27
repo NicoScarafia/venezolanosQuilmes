@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Title -->
+    <title>Somos Venezolanos en Quilmes | Login</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="link-left" href="../index.html#about">Nosotros</a>
+            <a class="link-left" href="../index.html#actividades">Actividades</a>
+            <a href="/">
+                <img class="main-logo" src="../assets/logo.png" alt="Logo Somos Venezolanos en Quilmes">
+            </a>
+            <a class="link-right" href="../index.html#redes">Nuestras Redes</a>
+            <a class="link-right" href="calendar.html">Calendario</a>
+            <a class="link-right login" href="#">Log In</a>
+        </nav>
+    </header>
+    
+    <div class="hero-section">
+        <img src="../assets/img/somosvenezolanos.jpg">
+    </div>
+
+    <main class="mainAdmin">
+        
+        <section class="loginAdm">
+            <div class="buttons">
+                <button id="closeSession">Cerrar Sesion</button>
+            </div>
+            
+            <div id="login">
+                <form>
+                    <div class="inputLog">
+                        <label for="user">Usuario:</label>
+                        <input type="text" name="user" id="user">
+                    </div>
+
+                    <div class="inputLog">
+                        <label for="pass">Contraseña:</label>
+                        <input type="password" name="pass" id="pass">
+                    </div>
+
+                    <h3 class="msj"></h3>
+
+                    <div class="inputSubmit">
+                        <button id="submit">Iniciar Sesion</button>
+                    </div>
+                </form>                
+            </div>
+        </section>
+
+        <section class="usersAdm">
+            <div class="userAdmTitle">
+                <h2>Usuarios:</h2>
+                <button id="addUser">Agregar Usuario</button>
+            </div>
+
+            <div class="addUserInput">
+                <form>
+                    <label for="newUser">Usuario: </label>
+                    <input class="inputText" type="text" name="newUser" id="newUser">
+
+                    <label class="inputText" for="password0">Contraseña: </label>
+                    <input class="inputText" type="password" name="pass0" id="pass0">
+                    <label for="password1">Repita Contraseña: </label>
+                    <input class="inputText" type="password" name="pass1" id="pass1">
+                    <img class="redCross" src="../assets/img/redCross.png" alt="">
+                    <img class="greenCheck" src="../assets/img/greenCheck.png" alt="">
+                    <input class="sudo" type="checkbox" name="sudo" id="sudo"> Superusuario
+                    <button type="submit" id="confirmUser">Agregar</button>
+
+                    <button id="addUserClose">X</button>
+                </form>
+
+                <h4 class="addUserMsj"></h4>
+                
+            </div>
+
+            <ul class="userAdmUl"></ul>
+        
+            <div class="activeUser">
+                <div>
+                    <h3>Usuario Activo: <span class="logedUser"></span></h3>
+                    <button class="changePass">Cambiar Contraseña</button>
+                </div>
+                
+                <form id="changePassUser">
+                    <div>
+                        <label for="currentPass">Contraseña Actual: <input type="password" name="currentPass" id="currentPass"></label>
+                    </div>
+                    
+                    <div>
+                        <label for="newPass0">Contraseña Nueva: <input type="password" name="NewPass0" id="newPass0"></label>                    
+                        <label for="newPass1">Repita Contraseña Nueva: <input type="password" name="newPass1" id="newPass1"></label>
+                    </div>
+
+                    <h4 id="changePassMsj"></h4>
+
+                    <div>
+                        <button id="confirmChangeP">Aceptar</button>
+                        <button id="cancelChangeP">Cancelar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+        
+        <section class="activitiesAdm">
+            <h2>Agregar nueva actividad:</h2>
+
+            <div class="uploader">
+                <form action="" id="uploader">
+                    <div>
+                        <label for="title">Titulo </label>
+                        <input type="text" name="title" id="uploaderTitle">
+                        <label for="description">Detalle </label>
+                        <textarea name="description" id="uploaderDescr" cols="30" rows="10"></textarea>
+                        <label for="link">Link </label>
+                        <input type="text" name="link" id="uploaderLink">
+
+                        <input type="file" name="image" id="image">
+                        
+                        <div id="uplMsj"></div>
+                        <button type="submit" id="upload">Subir Publicación</button>
+                    </div>
+                </form>
+
+                <div class="imagenDown">
+                    <img id="imagenDown" src="" alt="">
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <span>© Somos Venezolanos en Quilmes  |   Todos los derechos reservados.</span>
+        </div>
+        <div class="footer_contacto">
+            <h5>Contactanos</h5>
+            <ul>
+                <a href="" target="_blank"><li><i class="fa-brands fa-whatsapp"></i> Whatsapp</li></a>
+                <a href="" target="_blank"><li><i class="fa-brands fa-instagram"></i> Instagram</li></a>
+                <a href="" target="_blank"><li><i class="fa-brands fa-facebook-f"></i> Facebook</li></a>
+            </ul>
+        </div>
+    </footer>
+    
+
+    <script type="module" src="../js/login.js"></script>
+</body>
+</html>

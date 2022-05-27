@@ -8,10 +8,14 @@
     align-items: center;
     position: relative;
 
+    img {
+        height: 100%;
+    }
     .hero-logo {
         width: 15rem;
         margin-top: -2rem;
         margin-right: -3.5rem;
+        
         img {
             width: 100%;
         }

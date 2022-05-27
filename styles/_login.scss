@@ -1,0 +1,279 @@
+.mainAdmin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light;
+    min-height: 100vh;
+    height: fit-content;
+    
+    .loginAdm{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        #closeSession {
+            display: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+            padding-right: 2rem;
+
+            button {
+                margin-left: 2rem;
+                margin-top: 1rem;
+                height: 1.5rem;
+                padding: 0 0.5rem;
+            }
+        }
+    
+        #login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 2rem;
+
+            .inputLog {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+
+                label {
+                    margin-right: 1rem;
+                }
+
+                input {
+                    width: 10rem;
+                }
+            }
+
+            .msj {
+                height: 2rem;
+                text-align: center;
+            }
+
+            .inputSubmit {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    height: 1.5rem;
+                    padding: 0 0.5rem;
+                }
+            }
+
+            
+        }
+    }
+
+    .usersAdm {
+        display: none;
+        width: 60%; 
+        margin-top: 2rem;
+
+        .userAdmTitle {
+            display: flex;
+            margin-bottom: 1rem;
+
+            h2 {
+                width: 70%;
+            }
+
+            button {
+                height: 1.5rem;
+                margin-right: 1rem;
+                padding: 0 0.5rem;
+            } 
+            
+            #addUser {
+                display: none;
+            }
+        }
+
+        .addUserInput {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+
+            label {
+                margin-left: 1rem;
+            }
+
+            .inputText {
+                width: 8rem;
+                margin-left: 0.5rem;
+            }
+
+            .redCross, .greenCheck {
+                display: none;
+                width: 15px;
+            }
+
+            .sudo {
+                margin-left: 1rem;
+            }
+
+            #confirmUser {
+                height: 1.5rem;
+                margin-left: 3rem;
+                padding: 0 0.5rem;
+            }
+
+            #addUserClose {
+                border-radius: 0.65rem;
+                width: 1.3rem;
+                height: 1.3rem;
+                color: white;
+                background-color: red;
+                border: 1px solid red;
+                margin-left: 0.5rem;
+
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+
+            .addUserMsj {
+                width: 100%;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+
+        .userAdmUl {
+            margin: 2rem 0 0 5rem;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                width: 20rem;
+                margin-bottom: 1rem;
+
+                .delete {
+                    height: 1.5rem;
+                    margin-right: 1rem;
+                    padding: 0 0.5rem;
+                }
+            }
+
+        }
+
+        .activeUser {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+
+            div {
+                display: flex;
+                flex-direction: row;
+
+                h3 {
+                    min-width: 30rem;
+
+                    .logedUser {
+                        color: rgb(2, 187, 2);
+                        margin-left: 2rem;
+                    }
+                }
+            
+                button {
+                    height: 1.5rem;
+                    margin-right: 1rem;
+                    padding: 0 0.5rem;
+                }
+    
+            }
+            
+            form {
+                display: none;
+                flex-direction: column;
+
+                label {
+                    margin: 1rem;
+                }
+
+                #confirmChangeP, #cancelChangeP {
+                    margin-left: 15rem;
+                    width: 5rem;
+                    height: 1.5rem;
+                    margin-top: 1rem;
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+    }
+    
+    .activitiesAdm {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        padding-bottom: 5rem;
+        width: 100%;
+        
+
+        .uploader {
+            display: flex;
+            width: 50%;
+            margin-top: 2rem;
+            
+            #uploader {
+                width: 60%;
+                height: 25rem;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    label {
+                        text-align: center;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    input {
+                        margin-bottom: 1rem;
+                        height: 1.5rem;
+                        padding: 0 0.5rem;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        margin-bottom: 2rem;
+                    }
+
+                    #uplMsj {
+                        h4 {
+                            text-align: center;
+                            height: 1rem;
+                        }
+                    }
+
+                    button {
+                        align-self: center;
+                        margin-top: 1rem;
+                        width: 10rem;
+                        height: 1.5rem;
+                        padding: 0 0.5rem;
+                    }
+                }                
+            }
+
+            .imagenDown {
+                display: flex;
+                background-color: white;
+                justify-content: center;
+                width: 70%;
+                height: 25rem;
+                margin-left: 2rem;
+                border: $b;
+                
+            }
+        }
+    }
+}
