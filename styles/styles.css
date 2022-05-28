@@ -23,6 +23,7 @@ a {
   background-color: #feee4e;
   max-height: 5rem;
   height: 4rem;
+  text-align: center;
 }
 .navbar .link-left, .navbar .link-right {
   color: #f14143;
@@ -66,6 +67,67 @@ a {
   right: 2rem;
 }
 
+@media screen and (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+}
+.mobile_navbar {
+  background-color: #feee4e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 0.5rem 3rem;
+}
+.mobile_navbar img {
+  width: 4rem;
+}
+.mobile_navbar i {
+  font-size: 1.6rem;
+  color: #f14143;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mobile_navlist {
+  background-color: #f14143;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 20rem;
+  max-width: 80%;
+  height: calc(100vh - 4rem);
+  z-index: 1000;
+  padding: 2rem 1rem;
+}
+.mobile_navlist .list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.mobile_navlist .list .main-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.mobile_navlist .list a {
+  font-size: 1.2rem;
+  margin: 1.6rem;
+}
+
+@media screen and (min-width: 900px) {
+  .mobile_navbar {
+    display: none;
+  }
+
+  .mobile_navlist {
+    display: none;
+  }
+}
 .brand {
   background-color: #0a5aa2;
   width: 100%;
@@ -412,6 +474,47 @@ a {
   display: none;
 }
 
+@media all and (max-width: 700px) {
+  #actividades .actividades_content {
+    padding: 0 1rem;
+  }
+  #actividades .actividades_card {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    height: auto;
+    width: 98%;
+  }
+  #actividades .actividades_card .card_image {
+    width: 10rem;
+    margin: 0 auto;
+  }
+  #actividades .actividades_card .card_text .card_heading {
+    margin: 1.5rem auto 1rem auto;
+    text-align: center;
+  }
+}
+@media all and (max-width: 520px) {
+  #actividades .actividades_content {
+    padding: 0 1rem;
+  }
+  #actividades .actividades_card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 1.2rem 1.4rem;
+  }
+  #actividades .actividades_card .card_image {
+    width: 10rem;
+    margin: 0 auto;
+  }
+  #actividades .actividades_card .card_text .card_heading {
+    margin: 1.5rem auto 1rem auto;
+    text-align: center;
+  }
+}
 .mainCalendar {
   width: 100%;
   display: flex;
@@ -1116,6 +1219,8 @@ footer .footer_contacto ul {
 #main_about .about_comision .comision_content .comision_persona {
   margin-bottom: 1.1rem;
   margin-left: 4rem;
+  margin-right: 2rem;
+  flex-shrink: 3;
 }
 #main_about .about_comision .comision_content .comision_persona .persona_nombre {
   text-transform: uppercase;
@@ -1136,12 +1241,94 @@ footer .footer_contacto ul {
   outline: 0.2rem solid #e7d7d3;
   border-radius: 0.5rem;
 }
+@media screen and (max-width: 500px) {
+  #main_about .about_comision .comision_content .comision_image {
+    display: none;
+  }
+}
 #main_about .about_comision .comision_content .comision_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: right;
   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 750px) {
+  #main_about section {
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  #main_about .about_mision .mision_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  #main_about .about_mision .mision_content .mision_image {
+    width: 100%;
+    height: 10rem;
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 570px) {
+  #main_about section {
+    padding: 0 1.8rem;
+  }
+  #main_about .about_comision {
+    margin-top: 4rem;
+  }
+  #main_about .about_comision h2 {
+    color: #f14143;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+  #main_about .about_comision i {
+    font-size: 1.4rem;
+    color: white;
+    background-color: #f14143;
+    padding: 0.7rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  #main_about .about_comision .comision_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  #main_about .about_comision .comision_content .comision_persona {
+    margin-bottom: 1.1rem;
+    margin-left: 0rem;
+  }
+  #main_about .about_comision .comision_content .comision_persona .persona_nombre {
+    text-transform: uppercase;
+    font-size: 1.12rem;
+    color: #323232;
+    font-weight: 700;
+  }
+  #main_about .about_comision .comision_content .comision_persona .persona_cargo {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: #676767;
+  }
+  #main_about .about_comision .comision_content .comision_image {
+    width: 25rem;
+    margin-top: -1rem;
+    outline: 0.2rem solid #e7d7d3;
+    border-radius: 0.5rem;
+  }
+  #main_about .about_comision .comision_content .comision_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

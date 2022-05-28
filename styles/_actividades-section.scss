@@ -123,6 +123,61 @@
             }
         }
     }
-    
+}
 
+
+@media all and (max-width: 700px) {
+    #actividades {
+        .actividades_content {
+            padding: 0 1rem;
+        }
+        
+        .actividades_card {
+            display: flex;
+            flex-direction: column;
+            max-width: 35rem; height: auto;
+            width: 98%;;
+
+            .card_image {
+                width: 10rem;
+                margin: 0 auto;
+            }
+    
+            .card_text {
+                .card_heading {
+                    margin: 1.5rem auto 1rem auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 520px) {
+    #actividades {
+
+        .actividades_content {
+            padding: 0 1rem;
+        }
+
+        .actividades_card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%; height: auto;
+            padding: 1.2rem 1.4rem;
+
+            .card_image {
+                width: 10rem;
+                margin: 0 auto;
+            }
+    
+            .card_text {
+                .card_heading {
+                    margin: 1.5rem auto 1rem auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
