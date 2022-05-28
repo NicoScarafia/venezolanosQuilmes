@@ -4,7 +4,7 @@ import { db } from "./config.js";
 
 let days;
 
-window.addEventListener('load', function() {    
+window.addEventListener('load', function() {   
     
     if(JSON.parse(sessionStorage.getItem("loginSomosVen"))){
         document.querySelector(".addInput").style.display = "block";
@@ -163,7 +163,8 @@ window.addEventListener('load', function() {
         }    
     }
 
-    document.querySelector(".detailClose").onclick = closeDetail;
+    document.querySelector(".detailClose").onclick = () => {closeDetail();}
+    
 
     function openDetail(id) {
 
@@ -225,7 +226,10 @@ window.addEventListener('load', function() {
             document.querySelector(".detailUl").removeChild(document.querySelector(".detailUl").firstChild);
         }
 
-        location.reload();
+        if(JSON.parse(sessionStorage.getItem("loginSomosVen"))){
+            location.reload();
+        }        
+        
     }
 
     async function eliminar(id, ce, im) {

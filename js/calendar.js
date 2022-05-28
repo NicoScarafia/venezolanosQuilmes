@@ -1,4 +1,9 @@
 window.addEventListener('load', function() {
+    if(sessionStorage.getItem("loginSomosVen") === null){
+        sessionStorage.setItem("loginSomosVen", false);
+        sessionStorage.setItem("sudoSV", false);
+        sessionStorage.setItem("usuarioSV", "");
+    }
 
     const hero = document.querySelector(".hero-section");
     hero.style.height = "8rem";
