@@ -98,12 +98,10 @@ a {
     display: none;
   }
 }
-
 .mobile_navbar {
   background-color: #feee4e;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -112,12 +110,16 @@ a {
           justify-content: space-between;
   height: 4.5rem;
   padding: 1rem 3rem;
+=======
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 0.5rem 3rem;
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
 }
-
 .mobile_navbar img {
   width: 4rem;
 }
-
 .mobile_navbar i {
   font-size: 1.6rem;
   color: #f14143;
@@ -139,12 +141,10 @@ a {
   transition: all 0.3s;
   display: none;
 }
-
 .mobile_navlist .list {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -155,24 +155,18 @@ a {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+=======
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
 }
-
 .mobile_navlist .list .main-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
-
 .mobile_navlist .list a {
   font-size: 1.35rem;
   margin: 1.6rem;
@@ -202,11 +196,11 @@ a {
   .mobile_navbar {
     display: none;
   }
+
   .mobile_navlist {
     display: none;
   }
 }
-
 .brand {
   background-color: #0a5aa2;
   width: 100%;
@@ -477,10 +471,14 @@ a {
     margin-top: 1rem;
   }
 }
+<<<<<<< HEAD
 
 #actividades, #actividades_page_section {
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+#actividades {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -493,8 +491,12 @@ a {
   background-color: #0a5aa2;
   padding: 2.3rem 0;
 }
+<<<<<<< HEAD
 
 #actividades h2, #actividades_page_section h2 {
+=======
+#actividades h2 {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   font-family: "Signika Negative", sans-serif;
   color: #141720;
   font-size: 3.3rem;
@@ -505,23 +507,31 @@ a {
 }
 
 @media screen and (max-width: 960px) {
-  #actividades h2, #actividades_page_section h2 {
+  #actividades h2 {
     font-size: 2.8rem;
     text-align: center;
     padding: 0;
   }
 }
+<<<<<<< HEAD
 
 #actividades .carga, #actividades_page_section .carga {
+=======
+#actividades .carga {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   justify-items: center;
   text-align: start;
   width: 20rem;
   margin-top: 3rem;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_content, #actividades_page_section .actividades_content {
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+#actividades .actividades_content {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -530,8 +540,12 @@ a {
           justify-content: center;
   padding: 0 3rem;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_link, #actividades_page_section .actividades_link {
+=======
+#actividades .actividades_link {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   margin: 1.5rem auto;
   width: 7rem;
   background-color: #f14143;
@@ -542,6 +556,7 @@ a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_link:hover, #actividades_page_section .actividades_link:hover {
   color: #e7d7d3;
@@ -560,6 +575,20 @@ a {
 #actividades .actividades_card, #actividades_page_section .actividades_card {
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+#actividades .actividades_link:hover {
+  color: #e7d7d3;
+  background-color: #feee4e;
+}
+#actividades .actividades_link a {
+  color: white;
+  font-weight: 500;
+}
+#actividades .actividades_link a:hover {
+  color: black;
+}
+#actividades .actividades_card {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -573,55 +602,83 @@ a {
   padding: 1rem 1.8rem;
   border-radius: 1.5rem;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_image, #actividades_page_section .actividades_card .card_image {
+=======
+#actividades .actividades_card .card_image {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   min-width: 11rem;
   height: 100%;
   margin-right: 1.5rem;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_image img, #actividades_page_section .actividades_card .card_image img {
+=======
+#actividades .actividades_card .card_image img {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_text, #actividades_page_section .actividades_card .card_text {
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+#actividades .actividades_card .card_text {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_text .card_heading, #actividades_page_section .actividades_card .card_text .card_heading {
+=======
+#actividades .actividades_card .card_text .card_heading {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   height: 3rem;
   font-size: 1.3rem;
   font-weight: 600;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_text .card_date, #actividades_page_section .actividades_card .card_text .card_date {
+=======
+#actividades .actividades_card .card_text .card_date {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   margin: 0.8rem 0;
   font-family: "Roboto", sans-serif;
   font-size: 0.88rem;
   color: #636363;
   font-weight: 600;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_text .card_date i, #actividades_page_section .actividades_card .card_text .card_date i {
   margin-right: 0.2rem;
 }
 
 #actividades .actividades_card .card_text .card_main-text, #actividades_page_section .actividades_card .card_text .card_main-text {
+=======
+#actividades .actividades_card .card_text .card_date i {
+  margin-right: 0.2rem;
+}
+#actividades .actividades_card .card_text .card_main-text {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   font-family: "Roboto", sans-serif;
   font-size: 0.88rem;
   font-weight: 500;
   line-height: 1.4rem;
   text-align: justify;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_text .card_main-text .verMas, #actividades_page_section .actividades_card .card_text .card_main-text .verMas {
   text-decoration: underline;
@@ -631,6 +688,13 @@ a {
 #actividades .actividades_card .card_text .card_link, #actividades_page_section .actividades_card .card_text .card_link {
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+#actividades .actividades_card .card_text .card_main-text .verMas {
+  text-decoration: underline;
+  color: #0a5aa2;
+}
+#actividades .actividades_card .card_text .card_link {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -638,8 +702,12 @@ a {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_text .card_link i, #actividades_page_section .actividades_card .card_text .card_link i {
+=======
+#actividades .actividades_card .card_text .card_link i {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   background-color: #0a5aa2;
   color: white;
   padding: 0.4rem;
@@ -647,12 +715,19 @@ a {
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
+<<<<<<< HEAD
 
 #actividades .actividades_card .card_text .card_link i:hover, #actividades_page_section .actividades_card .card_text .card_link i:hover {
   background-color: #f14143;
 }
 
 #actividades .actividades_card .card_text .del, #actividades_page_section .actividades_card .card_text .del {
+=======
+#actividades .actividades_card .card_text .card_link i:hover {
+  background-color: #f14143;
+}
+#actividades .actividades_card .card_text .del {
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
   display: none;
 }
 
@@ -661,13 +736,8 @@ a {
     padding: 0 1rem;
   }
   #actividades .actividades_card {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     max-width: 35rem;
     height: auto;
     width: 98%;
@@ -681,19 +751,13 @@ a {
     text-align: center;
   }
 }
-
 @media all and (max-width: 520px) {
   #actividades .actividades_content {
     padding: 0 1rem;
   }
   #actividades .actividades_card {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -708,7 +772,6 @@ a {
     text-align: center;
   }
 }
-
 .mainCalendar {
   width: 100%;
   display: -webkit-box;
@@ -1617,8 +1680,185 @@ footer .footer_contacto ul {
 }
 
 #main_actividades #actividades_page_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
-  margin: -2rem auto;
+  margin: 3rem auto -2rem auto;
+  padding: 2.3rem 0;
+}
+#main_actividades #actividades_page_section #cargarMas {
+  width: 7rem;
+  background-color: #f14143;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+  transition: all 0.3s;
+}
+#main_actividades #actividades_page_section #cargarMas:hover {
+  color: #e7d7d3;
+  background-color: #feee4e;
+}
+#main_actividades #actividades_page_section h2 {
+  font-family: "Signika Negative", sans-serif;
+  color: #141720;
+  font-size: 3.3rem;
+  letter-spacing: -0.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 960px) {
+  #main_actividades #actividades_page_section h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 0;
+  }
+}
+#main_actividades #actividades_page_section .carga {
+  justify-items: center;
+  text-align: start;
+  width: 20rem;
+  margin-top: 3rem;
+}
+#main_actividades #actividades_page_section .actividades_content-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 3rem;
+}
+#main_actividades #actividades_page_section .actividades_link-page {
+  margin: 1.5rem auto;
+  width: 7rem;
+  background-color: #f14143;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+  transition: all 0.3s;
+}
+#main_actividades #actividades_page_section .actividades_link-page:hover {
+  color: #e7d7d3;
+  background-color: #feee4e;
+}
+#main_actividades #actividades_page_section .actividades_link-page a {
+  color: white;
+  font-weight: 500;
+}
+#main_actividades #actividades_page_section .actividades_link-page a:hover {
+  color: black;
+}
+#main_actividades #actividades_page_section .actividades_card-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 1rem auto;
+  width: 35rem;
+  height: 23rem;
+  background-color: whitesmoke;
+  padding: 1rem 1.8rem;
+  border-radius: 1.5rem;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_image-page {
+  min-width: 11rem;
+  height: 100%;
+  margin-right: 1.5rem;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_image-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page {
+  display: flex;
+  flex-direction: column;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
+  height: 3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_date-page {
+  margin: 0.8rem 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.88rem;
+  color: #636363;
+  font-weight: 600;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_date-page i {
+  margin-right: 0.2rem;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_main-text-page {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_main-text-page .verMas {
+  text-decoration: underline;
+  color: #0a5aa2;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_link-page {
+  display: flex;
+  justify-content: end;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_link-page i {
+  background-color: #0a5aa2;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  transition: 0.2s all;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_link-page i:hover {
+  background-color: #f14143;
+}
+#main_actividades #actividades_page_section .actividades_card-page .card_text-page .del {
+  display: none;
+}
+@media all and (max-width: 700px) {
+  #main_actividades #actividades_page_section .actividades_content-page {
+    padding: 0 1rem;
+  }
+  #main_actividades #actividades_page_section .actividades_card-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    height: auto;
+    width: 98%;
+  }
+  #main_actividades #actividades_page_section .actividades_card-page .card_image-page {
+    width: 10rem;
+    margin: 0 auto;
+  }
+  #main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
+    margin: 1.5rem auto 1rem auto;
+    text-align: center;
+  }
+}
+@media all and (max-width: 520px) {
+  #main_actividades #actividades_page_section .actividades_content-page {
+    padding: 0 1rem;
+  }
+  #main_actividades #actividades_page_section .actividades_card-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 1.2rem 1.4rem;
+  }
+  #main_actividades #actividades_page_section .actividades_card-page .card_image-page {
+    width: 10rem;
+    margin: 0 auto;
+  }
+  #main_actividades #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
+    margin: 1.5rem auto 1rem auto;
+    text-align: center;
+  }
 }
 
 #main_about h1 {
@@ -1735,8 +1975,7 @@ footer .footer_contacto ul {
   margin-bottom: 1.1rem;
   margin-left: 4rem;
   margin-right: 2rem;
-  -ms-flex-negative: 3;
-      flex-shrink: 3;
+  flex-shrink: 3;
 }
 
 #main_about .about_comision .comision_content .comision_persona .persona_nombre {
@@ -1760,13 +1999,19 @@ footer .footer_contacto ul {
   outline: 0.2rem solid #e7d7d3;
   border-radius: 0.5rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
 @media screen and (max-width: 500px) {
   #main_about .about_comision .comision_content .comision_image {
     display: none;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755
 #main_about .about_comision .comision_content .comision_image img {
   width: 100%;
   height: 100%;
@@ -1785,22 +2030,12 @@ footer .footer_contacto ul {
     margin-left: 2rem;
   }
 }
-
 @media screen and (max-width: 810px) {
   #main_about .about_mision .mision_content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 1rem;
   }
   #main_about .about_mision .mision_content .mision_image {
@@ -1809,7 +2044,6 @@ footer .footer_contacto ul {
     margin: 1rem 0;
   }
 }
-
 @media screen and (max-width: 570px) {
   #main_about section {
     padding: 0 1.8rem;
@@ -1820,12 +2054,8 @@ footer .footer_contacto ul {
   #main_about .about_comision h2 {
     color: #f14143;
     font-size: 2.5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   #main_about .about_comision i {
     font-size: 1.4rem;
@@ -1836,12 +2066,8 @@ footer .footer_contacto ul {
     margin-right: 1rem;
   }
   #main_about .about_comision .comision_content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     margin-top: 2rem;
   }
   #main_about .about_comision .comision_content .comision_persona {
@@ -1870,11 +2096,14 @@ footer .footer_contacto ul {
   #main_about .about_comision .comision_content .comision_image img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: right;
-       object-position: right;
+    object-fit: cover;
+    object-position: right;
     border-radius: 0.5rem;
   }
 }
+<<<<<<< HEAD
 /*# sourceMappingURL=styles.css.map */
+=======
+
+/*# sourceMappingURL=styles.css.map */
+>>>>>>> 86bd1f65f52a235fea42c42b0e47af84dd287755

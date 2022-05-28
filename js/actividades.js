@@ -15,13 +15,13 @@ window.addEventListener('load', function() {
         document.querySelector(".login").innerHTML = "Log in";
     }
 
-    const actividades_content = document.querySelector(".actividades_content");
+    const actividades_content = document.querySelector(".actividades_content-page");
 
     const actividades = document.querySelector("#actividades_page_section");
-    const carga = document.createElement("h2");
-    carga.className = "carga";
-    carga.innerHTML = "CARGANDO"
-    actividades.appendChild(carga);
+    // const carga = document.createElement("h2");
+    // carga.className = "carga";
+    // carga.innerHTML = "CARGANDO"
+    // actividades.appendChild(carga);
     
     let fileData;
     let last;
@@ -30,6 +30,11 @@ window.addEventListener('load', function() {
     const cargarMas = document.querySelector("#cargarMas");
     cargarMas.onclick = () => {queryData()};
 
+    const verTodo = document.querySelector(".actividades_link-page");
+    verTodo.style.display = "none";
+    verTodo.onclick = () => {
+        verTodo.style.display = "none";
+    }
 
     queryData();
 
@@ -38,15 +43,22 @@ window.addEventListener('load', function() {
 
         let q;
 
-        if(!preLoaded){
-            q = query(collection(db, "Activities"), orderBy("date", "desc"), limit(3));
+        if(sessionStorage.getItem("activityID") !== null && sessionStorage.getItem("activityID") !== ""){
+            q = query(collection(db, "Activities"), orderBy("date", "desc"), limit(1));
+            cargarMas.style.display = "none"
+            verTodo.style.display = "block";
+            sessionStorage.setItem("activityID", "");
         } else {
-            q = query(collection(db, "Activities"), orderBy("date", "desc"), startAfter(last), limit(3));
+            if(!preLoaded){
+                q = query(collection(db, "Activities"), orderBy("date", "desc"), limit(3));
+            } else {
+                q = query(collection(db, "Activities"), orderBy("date", "desc"), startAfter(last), limit(3));
+            }
         }
-        
+                
         await getDocs(q)
             .then((resp) => {
-                fileData = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+                fileData = resp.docs.map((d) => ({id: d.id, ...d.data()}))
                 console.log(fileData);
                 last = resp.docs[resp.docs.length - 1];
                 preLoaded = true;
@@ -61,43 +73,43 @@ window.addEventListener('load', function() {
             console.log(dateid);
 
             const actividades_card = document.createElement("div");
-            actividades_card.className = "actividades_card";
+            actividades_card.className = "actividades_card-page";
 
             const card_image = document.createElement("div");
-            card_image.className = "card_image";
+            card_image.className = "card_image-page";
 
             const act_imagen = document.createElement("img");
-            act_imagen.className = "act_imagen";
+            act_imagen.className = "act_imagen-page";
 
             const card_text = document.createElement("div");
-            card_text.className = "card_text";
+            card_text.className = "card_text-page";
 
             const card_heading = document.createElement("div");
-            card_heading.className = "card_heading";
+            card_heading.className = "card_heading-page";
 
             const h4 = document.createElement("h4");
-            h4.className = "act_titulo";
+            h4.className = "act_titulo-page";
 
             const card_date = document.createElement("div");
-            card_date.className = "card_date";
+            card_date.className = "card_date-page";
 
             const i0 = document.createElement("i");
             i0.classList = "fa-regular fa-calendar";
 
             const span = document.createElement("span");
-            span.className = "act_fecha";
+            span.className = "act_fecha-page";
 
             const card_main_text = document.createElement("div");
-            card_main_text.className = "card_main-text";
+            card_main_text.className = "card_main-text-page";
 
             const act_texto = document.createElement("act_texto");
-            act_texto.className = "act_texto";
+            act_texto.className = "act_texto-page";
 
             const card_link = document.createElement("div");
-            card_link.className = "card_link";
+            card_link.className = "card_link-page";
 
             const act_link = document.createElement("a");
-            act_link.className = "act_link";
+            act_link.className = "act_link-page";
             act_link.target = "_blank";
 
             const i1 = document.createElement("i");
@@ -141,13 +153,13 @@ window.addEventListener('load', function() {
 
             getUrl(fileData[i].path, act_imagen);
 
-            const verMas = document.createElement("a");
-            verMas.id = "verMas" + dateid;
-            verMas.className = "verMas"
-            verMas.innerHTML = "Ver Mas"
-            verMas.href = "pages/actividades.html#" + dateid;
+            // const verMas = document.createElement("a");
+            // verMas.id = "verMas" + dateid;
+            // verMas.className = "verMas"
+            // verMas.innerHTML = "Ver Mas"
+            // verMas.href = "pages/actividades.html#" + dateid;
 
-            document.querySelector("#card_main_text" + dateid).appendChild(verMas);
+            // document.querySelector("#card_main_text" + dateid).appendChild(verMas);
 
             const del = document.createElement("button");
             del.innerHTML = "Eliminar"
