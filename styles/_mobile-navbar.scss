@@ -1,0 +1,62 @@
+.mobile_navbar {
+    background-color: $yellow;
+    display: flex;
+    align-items: center;    justify-content: space-between;
+    height: 4rem;
+    padding: 0.5rem 3rem;
+    
+    img {
+        width: 4rem;
+    }
+
+    i {
+        font-size: 1.6rem;
+        color: $red;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.mobile_navlist {
+    background-color: $red;
+    position: absolute;
+    top: 4rem;  right: 0;
+    width: 20rem;
+    max-width: 80%; height: calc(100vh - 4rem); // - mobile nav height
+    z-index: 1000;
+    padding: 2rem 1rem;
+
+    .list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;    justify-content: space-around;
+        
+
+        .main-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;    justify-content: center;
+        }
+
+        a {
+            font-size: 1.2rem;
+            margin: 1.6rem;
+        }
+
+
+    }
+    
+
+    
+}
+
+@media screen and (min-width: 900px) {
+    .mobile_navbar {
+        display: none;
+    }
+
+    .mobile_navlist {
+        display: none;
+    }
+}

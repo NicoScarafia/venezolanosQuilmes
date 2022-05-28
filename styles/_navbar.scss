@@ -6,6 +6,7 @@
     background-color: $yellow;
     max-height: 5rem;
     height: 4rem;
+    text-align: center;
 
     .link-left, .link-right {
         color: $red;
@@ -55,5 +56,11 @@
         right: 2rem;
         
         
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        display: none;
     }
 }
