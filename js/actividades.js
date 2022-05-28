@@ -1,9 +1,8 @@
-import { doc, collection, getDocs, orderBy, limit, query, deleteDoc } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
+import { doc, collection, getDocs, orderBy, limit, query, deleteDoc, startAfter, startAt } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js";
 import { db } from "./config.js";
 
 window.addEventListener('load', function() {
-
     if(sessionStorage.getItem("loginSomosVen") === null){
         sessionStorage.setItem("loginSomosVen", false);
         sessionStorage.setItem("sudoSV", false);
@@ -16,30 +15,41 @@ window.addEventListener('load', function() {
         document.querySelector(".login").innerHTML = "Log in";
     }
 
-
     const actividades_content = document.querySelector(".actividades_content");
-    // actividades_content.style.display = "none";
 
-    // const actividades_link = document.querySelector(".actividades_link");
-    // actividades_link.style.display = "none";
-
-    // const actividades = document.querySelector("#actividades");
-    // const carga = document.createElement("h2");
-    // carga.className = "carga";
-    // carga.innerHTML = "CARGANDO"
-    // actividades.appendChild(carga);
-
+    const actividades = document.querySelector("#actividades_page_section");
+    const carga = document.createElement("h2");
+    carga.className = "carga";
+    carga.innerHTML = "CARGANDO"
+    actividades.appendChild(carga);
+    
     let fileData;
+    let last;
+    let preLoaded = false;
+
+    const cargarMas = document.querySelector("#cargarMas");
+    cargarMas.onclick = () => {queryData()};
+
 
     queryData();
 
     async function queryData() {
         console.log("Query");
+
+        let q;
+
+        if(!preLoaded){
+            q = query(collection(db, "Activities"), orderBy("date", "desc"), limit(3));
+        } else {
+            q = query(collection(db, "Activities"), orderBy("date", "desc"), startAfter(last), limit(3));
+        }
         
-        await getDocs(query(collection(db, "Activities"), orderBy("date", "desc"), limit(6)))
+        await getDocs(q)
             .then((resp) => {
                 fileData = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
                 console.log(fileData);
+                last = resp.docs[resp.docs.length - 1];
+                preLoaded = true;
                 loadActiv();
             })
     }
@@ -130,7 +140,7 @@ window.addEventListener('load', function() {
                             document.querySelector("#act_link" + dateid).appendChild(i1);
 
             getUrl(fileData[i].path, act_imagen);
-            
+
             const verMas = document.createElement("a");
             verMas.id = "verMas" + dateid;
             verMas.className = "verMas"
@@ -158,11 +168,9 @@ window.addEventListener('load', function() {
             console.log(actividades_content);
         }
 
-        carga.style.display = "none";
-        actividades_content.style.display = "flex";
-        actividades_link.style.display = "block";
         console.log("end");
     }
+
 
     function getUrl(path, img) {
         const pathRef = ref(getStorage(), path);
@@ -182,5 +190,4 @@ window.addEventListener('load', function() {
     }
 
     
-
-},false)
+}, false)

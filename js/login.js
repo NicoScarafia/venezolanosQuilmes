@@ -5,13 +5,18 @@ import { db } from './config.js';
 
 window.addEventListener('load', function() {
 
+    if(sessionStorage.getItem("loginSomosVen") === null){
+        sessionStorage.setItem("loginSomosVen", false);
+        sessionStorage.setItem("sudoSV", false);
+        sessionStorage.setItem("usuarioSV", "");
+    }
+
     const hero = document.querySelector(".hero-section");
     hero.style.height = "8rem";
     hero.style.minHeight = "0rem";
 
     let userLog;
     let usersData;
-    let logTrue;
 
     if(JSON.parse(sessionStorage.getItem("loginSomosVen"))){
         document.querySelector(".usersAdm").style.display = "block";
