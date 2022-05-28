@@ -31,7 +31,7 @@
     
         .actividades_content-page {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
     
             padding: 0 3rem;
@@ -57,7 +57,7 @@
             align-items: flex-start;
             margin: 1rem auto;
     
-            width: 35rem; height: 23rem;
+            width: 80%; height: auto;
     
             background-color: whitesmoke;
             padding: 1rem 1.8rem;
@@ -65,7 +65,7 @@
             border-radius: 1.5rem;
     
             .card_image-page {
-                min-width: 11rem; height: 100%;
+                min-width: 11rem; height: auto;
                 margin-right: 1.5rem;
                 
                 img {
