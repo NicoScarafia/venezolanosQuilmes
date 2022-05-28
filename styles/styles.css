@@ -1017,6 +1017,19 @@ footer .footer_contacto ul {
   background-color: white;
   margin: -2rem auto;
 }
+#main_actividades #actividades_page_section #cargarMas {
+  width: 7rem;
+  background-color: #f14143;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+  transition: all 0.3s;
+}
+#main_actividades #actividades_page_section #cargarMas:hover {
+  color: #e7d7d3;
+  background-color: #feee4e;
+}
 
 #main_about h1 {
   text-transform: uppercase;

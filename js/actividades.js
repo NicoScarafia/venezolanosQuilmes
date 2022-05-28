@@ -17,11 +17,11 @@ window.addEventListener('load', function() {
 
     const actividades_content = document.querySelector(".actividades_content");
 
-    const actividades = document.querySelector("#actividades_page_section");
-    const carga = document.createElement("h2");
-    carga.className = "carga";
-    carga.innerHTML = "CARGANDO"
-    actividades.appendChild(carga);
+    // const actividades = document.querySelector("#actividades_page_section");
+    // const carga = document.createElement("h2");
+    // carga.className = "carga";
+    // carga.innerHTML = "CARGANDO"
+    // actividades.appendChild(carga);
     
     let fileData;
     let last;
@@ -30,6 +30,12 @@ window.addEventListener('load', function() {
     const cargarMas = document.querySelector("#cargarMas");
     cargarMas.onclick = () => {queryData()};
 
+    const verTodo = document.querySelector(".actividades_link");
+    verTodo.style.display = "none";
+    verTodo.onclick = () => {
+        verTodo.style.display = "none";
+        window.location.href = "../pages/actividades.html";
+    }
 
     queryData();
 
@@ -38,15 +44,22 @@ window.addEventListener('load', function() {
 
         let q;
 
-        if(!preLoaded){
-            q = query(collection(db, "Activities"), orderBy("date", "desc"), limit(3));
+        if(sessionStorage.getItem("activityID") !== null && sessionStorage.getItem("activityID") !== ""){
+            q = query(collection(db, "Activities"), orderBy("date", "desc"), limit(1));
+            cargarMas.style.display = "none"
+            verTodo.style.display = "block";
+            sessionStorage.setItem("activityID", "");
         } else {
-            q = query(collection(db, "Activities"), orderBy("date", "desc"), startAfter(last), limit(3));
+            if(!preLoaded){
+                q = query(collection(db, "Activities"), orderBy("date", "desc"), limit(3));
+            } else {
+                q = query(collection(db, "Activities"), orderBy("date", "desc"), startAfter(last), limit(3));
+            }
         }
-        
+                
         await getDocs(q)
             .then((resp) => {
-                fileData = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+                fileData = resp.docs.map((d) => ({id: d.id, ...d.data()}))
                 console.log(fileData);
                 last = resp.docs[resp.docs.length - 1];
                 preLoaded = true;

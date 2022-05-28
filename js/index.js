@@ -135,8 +135,7 @@ window.addEventListener('load', function() {
             verMas.id = "verMas" + dateid;
             verMas.className = "verMas"
             verMas.innerHTML = "Ver Mas"
-            verMas.href = "pages/actividades.html#" + dateid;
-
+            verMas.onclick = () => {toActivity(fileData[i].id)}
             document.querySelector("#card_main_text" + dateid).appendChild(verMas);
 
             const del = document.createElement("button");
@@ -158,7 +157,6 @@ window.addEventListener('load', function() {
             console.log(actividades_content);
         }
 
-        carga.style.display = "none";
         actividades_content.style.display = "flex";
         actividades_link.style.display = "block";
         console.log("end");
@@ -172,6 +170,11 @@ window.addEventListener('load', function() {
                 console.log(url);
                 img.src = url;
             })
+    }
+
+    function toActivity(id) {
+        sessionStorage.setItem("activityID", id);
+        window.location.href = "pages/actividades.html";
     }
 
     function eliminar(id, actId) {
