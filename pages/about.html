@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Title -->
     <title>About | Somos Venezolanos en Quilmes</title>
-    <link rel="stylesheet" href="/assets/logo.png">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -34,10 +34,13 @@
             <a href="/">
                 <img class="main-logo" src="../assets/logo.png" alt="Logo Somos Venezolanos en Quilmes">
             </a>
-            <i class="fa-solid fa-bars"></i>
+            <i id="mobileNavMenu" class="fa-solid fa-bars"></i>
         </nav>
-        <div class="mobile_navlist">
+        <div id="mobile_navlist" class="mobile_navlist translateObj">
             <div class="list">
+                <div id="closeMobileNav" class="list-close">
+                    <i class="fa-solid fa-x"></i>
+                </div>
                 <div class="main-list">
                     <a class="link-left" href="../index.html#about">Nosotros</a>
                     <a class="link-left" href="../index.html#actividades">Actividades</a>
@@ -170,6 +173,8 @@
             </ul>
         </div>
     </footer>
+
+    <script src="../js/navbar.js"></script>
     
 </body>
 </html>

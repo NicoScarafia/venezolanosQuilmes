@@ -16,6 +16,7 @@
 <body>
 
     <header>
+
         <nav class="navbar">
             <a class="link-left" href="#about">Nosotros</a>
             <a class="link-left" href="#actividades">Actividades</a>
@@ -26,6 +27,31 @@
             <a class="link-right" href="pages/calendar.html">Calendario</a>
             <a class="link-right login" href="pages/login.html">Log In</a>
         </nav>
+
+        <!-- Mobile Navbar -->
+        <nav class="mobile_navbar">
+            <a href="/">
+                <img class="main-logo" src="../assets/logo.png" alt="Logo Somos Venezolanos en Quilmes">
+            </a>
+            <i id="mobileNavMenu" class="fa-solid fa-bars"></i>
+        </nav>
+        <div id="mobile_navlist" class="mobile_navlist translateObj">
+            <div class="list">
+                <div id="closeMobileNav" class="list-close">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="main-list">
+                    <a class="link-left" href="#about">Nosotros</a>
+                    <a class="link-left" href="#actividades">Actividades</a>
+                    <a class="link-right" href="#redes">Nuestras Redes</a>
+                    <a class="link-right" href="./pages/calendar.html">Calendario</a>
+                </div>
+                <div class="login-list">
+                    <a class="link-right login" href="./pages/login.html">Log In</a>
+                </div>
+            </div>
+        </div>
+
     </header>
     
     <div class="hero-section">
@@ -116,5 +142,6 @@
 
 
     <!-- <script type="module" src="js/index.js"></script> -->
+    <script src="js/navbar.js"></script>
 </body>
 </html>
