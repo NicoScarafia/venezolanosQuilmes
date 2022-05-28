@@ -34,7 +34,6 @@ window.addEventListener('load', function() {
     verTodo.style.display = "none";
     verTodo.onclick = () => {
         verTodo.style.display = "none";
-        window.location.href = "../pages/actividades.html";
     }
 
     queryData();
