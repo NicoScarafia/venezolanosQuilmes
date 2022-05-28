@@ -20,6 +20,12 @@ $text-font: 'Roboto', sans-serif;
     color: $dark;
     font-size: 3.3rem;
     letter-spacing: -0.1rem;
+
+    @media screen and (max-width: 960px) {
+        font-size: 2.8rem;
+        text-align: center;
+        padding: 0;
+    }
 }
 
 @mixin PageTitle {

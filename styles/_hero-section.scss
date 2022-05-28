@@ -2,11 +2,18 @@
     width: 100%;
     min-height: 22rem;
     height: 60vh;
-    background-color: $blue;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+
+    background-image: url(../assets/decorativas/beach.jpg);
+
+    background-color: $blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-blend-mode: soft-light;
 
     img {
         height: 100%;
@@ -33,7 +40,6 @@
             font-size: 6rem;
             background: url('../assets/img/bandera-venezuela-2.jpg');
             background-size: 100%;
-            background-position-x: center;
             background-position-y: -5px;
             background-repeat: no-repeat;
             background-clip: text;
@@ -45,7 +51,6 @@
             font-size: 6rem;
             background: url('../assets/img/bandera-argentina.jpg');
             background-size: 100%;
-            background-position-x: center;
             background-position-y: -8px;
             background-repeat: no-repeat;
             background-clip: text;
@@ -59,6 +64,65 @@
 
         .second-line {
             margin-left: 10rem;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .hero-section {
+        .hero-logo {
+            width: 13rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+
+            .venezolanos, .quilmes {
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hero-section {
+        height: calc(100vh - 4rem);
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 0;
+
+        .hero-logo {
+            width: 15rem;
+        }
+        h1 {
+            margin-top: 2rem;
+            padding: 0 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 0;
+
+        .hero-logo {
+            width: 15rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+
+            .venezolanos, .quilmes {
+                font-size: 3.8rem;
+            }
+
+            .second-line {
+                margin-left: 2rem;
+            }
+
+            .quilmes {
+                padding-left: 0;
+            }
         }
     }
 }
