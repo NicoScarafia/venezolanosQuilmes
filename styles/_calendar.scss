@@ -127,13 +127,13 @@
         flex-direction: column;
         position: fixed;
         z-index: 3;
-        top: 18rem;
-        right: 45rem;
+        top: 30vh;
+        left: calc((100vw - 40vw) /2);
         background-color: $light;
         height: auto; 
-        width: 40rem;
+        width: 40vw;
         border: 1px solid black;  
-        box-shadow: 10px 10px 15px black;
+        box-shadow: 10px 10px 15px $red;
         border-radius: 10px;
 
         .detailHead {
@@ -157,7 +157,7 @@
         }
 
         .detailUl {
-            margin-left: 3rem;
+            margin: 3rem;
 
             li {
                 display: flex;
@@ -197,7 +197,7 @@
     background-color: $light;
     border: 1px solid $light;
     border-radius: 10px;
-    box-shadow: 5px 5px 30px darkgrey;
+    box-shadow: 5px 5px 30px $red;
 
     h3 {
         font-size: 3rem;
@@ -277,3 +277,13 @@
     }
 }
 
+@media all and (max-width: 1200px) {
+    .year {
+        grid-template-columns: 1fr;
+    }
+
+    .detail {
+        width: 60vw;
+        left: calc((100vw - 60vw) / 2);
+    }
+}

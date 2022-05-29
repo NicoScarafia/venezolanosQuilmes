@@ -44,8 +44,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-    
-            padding: 0 3rem;
         }
     
         .actividades_link-page {
@@ -144,25 +142,27 @@
         }
     }
     
-    
-    @media all and (max-width: 700px) {
+    @media all and (max-width: 750px) {
         #actividades_page_section  {
             .actividades_content-page {
-                padding: 0 1rem;
+                width: 100vw;
+                padding: 0 0rem;
             }
             
             .actividades_card-page {
                 display: flex;
                 flex-direction: column;
-                max-width: 35rem; height: auto;
-                width: 98%;;
+                width: 90%; height: auto;
     
                 .card_image-page {
-                    width: 10rem;
+                    width: 80vw; height: 80vw;
                     margin: 0 auto;
                 }
         
                 .card_text-page {
+                    width: 100%;
+                    align-items: center;
+
                     .card_heading-page {
                         margin: 1.5rem auto 1rem auto;
                         text-align: center;
@@ -187,7 +187,7 @@
                 padding: 1.2rem 1.4rem;
     
                 .card_image-page {
-                    width: 10rem;
+                    
                     margin: 0 auto;
                 }
         

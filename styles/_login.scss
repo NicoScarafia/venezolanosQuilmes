@@ -5,7 +5,6 @@
     align-items: center;
     background-color: $light;
     min-height: 100vh;
-    height: fit-content;
     
     .loginAdm{
         width: 100%;
@@ -73,40 +72,53 @@
 
     .usersAdm {
         display: none;
+        align-items: center;
+        justify-content: center;
         width: 60%; 
         margin-top: 2rem;
 
         .userAdmTitle {
             display: flex;
+            width: 100%;
             margin-bottom: 1rem;
 
             h2 {
-                width: 70%;
+                text-align: center;
+                width: calc(100% - 10rem);
             }
 
             button {
                 height: 1.5rem;
-                margin-right: 1rem;
                 padding: 0 0.5rem;
             } 
             
             #addUser {
                 display: none;
+                width: 10rem;
             }
         }
 
         .addUserInput {
             display: none;
+            flex-wrap: wrap;
             flex-direction: column;
+            align-items: center;
             justify-content: space-between;
+            width: 100%;
+            
 
-            label {
-                margin-left: 1rem;
+            div {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                width: 18rem;
+                margin-bottom: 0.5rem;
             }
 
             .inputText {
                 width: 8rem;
-                margin-left: 0.5rem;
+                margin-left: 0rem;
             }
 
             .redCross, .greenCheck {
@@ -115,27 +127,24 @@
             }
 
             .sudo {
-                margin-left: 1rem;
+                margin-left: 2rem;
+                margin-top: 1rem;
             }
 
             #confirmUser {
+                margin-top: 2rem;
+                margin-left: calc((100% - 11rem) /2);
+                width: 5rem;
                 height: 1.5rem;
-                margin-left: 3rem;
                 padding: 0 0.5rem;
             }
 
             #addUserClose {
-                border-radius: 0.65rem;
-                width: 1.3rem;
-                height: 1.3rem;
-                color: white;
-                background-color: red;
-                border: 1px solid red;
-                margin-left: 0.5rem;
-
-                &:active {
-                    transform: scale(0.9);
-                }
+                margin-top: 2rem;
+                margin-left: 1rem;
+                width: 5rem;
+                height: 1.5rem;
+                padding: 0 0.5rem;
             }
 
             .addUserMsj {
@@ -146,13 +155,16 @@
         }
 
         .userAdmUl {
-            margin: 2rem 0 0 5rem;
+            margin-top: 2rem;
+            margin-left: calc((100% - 20rem) /2);
+            list-style: none;
+
 
             li {
                 display: flex;
                 justify-content: space-between;
                 width: 20rem;
-                margin-bottom: 1rem;
+                margin-bottom: 0.5rem;
 
                 .delete {
                     height: 1.5rem;
@@ -166,14 +178,18 @@
         .activeUser {
             display: flex;
             flex-direction: column;
+            align-items: center;
             margin-top: 3rem;
+            width: 100%;
 
             div {
                 display: flex;
                 flex-direction: row;
+                width: 100%;
 
                 h3 {
-                    min-width: 30rem;
+                    width: calc(100% - 10rem);
+                    text-align: center;
 
                     .logedUser {
                         color: rgb(2, 187, 2);
@@ -181,9 +197,9 @@
                     }
                 }
             
-                button {
+                .changePass {
+                    width: 10rem;
                     height: 1.5rem;
-                    margin-right: 1rem;
                     padding: 0 0.5rem;
                 }
     
@@ -192,20 +208,36 @@
             form {
                 display: none;
                 flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-top: 1rem;
+                div {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 25rem;
+                    margin-bottom: 0.5rem;
 
-                label {
-                    margin: 1rem;
+                    .inputText {
+                        width: 8rem;
+                        margin-left: 0rem;
+                    }
                 }
 
-                #confirmChangeP, #cancelChangeP {
-                    margin-left: 15rem;
+                #confirmChangeP, #cancelChangeP {                
                     width: 5rem;
                     height: 1.5rem;
-                    margin-top: 1rem;
+                    margin: 1rem 4rem;
                     padding: 0 0.5rem;
                 }
             }
         }
+    }
+
+    .contactData {
+        display: none;
+        margin-top: 2rem;
     }
     
     .activitiesAdm {
@@ -215,16 +247,17 @@
         margin-top: 3rem;
         padding-bottom: 5rem;
         width: 100%;
-        
 
         .uploader {
             display: flex;
-            width: 50%;
+            flex-direction: column;
+            align-items: center;
+            width: 60rem;
             margin-top: 2rem;
             
             #uploader {
-                width: 60%;
-                height: 25rem;
+                display: flex;
+                width: 100%;
 
                 div {
                     display: flex;
@@ -253,27 +286,40 @@
                             height: 1rem;
                         }
                     }
+                }
 
-                    button {
-                        align-self: center;
-                        margin-top: 1rem;
-                        width: 10rem;
-                        height: 1.5rem;
-                        padding: 0 0.5rem;
-                    }
-                }                
-            }
-
-            .imagenDown {
-                display: flex;
-                background-color: white;
-                justify-content: center;
-                width: 70%;
-                height: 25rem;
-                margin-left: 2rem;
-                border: $b;
+                .uploaderText {
+                    width: 30rem;
+                }
                 
+                .imagenDown {
+                    display: flex;
+                    background-color: white;
+                    justify-content: center;
+                    width: 30rem;
+                    height: 25rem;
+                    margin-left: 2rem;
+                    border: $b;                    
+                }
             }
+
+            #upload {
+                width: 15rem;
+                margin-top: 2rem;
+            }
+
+            
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #uploader {
+        flex-direction: column;
+        align-items: center;
+
+        .imagenDown {
+            margin-right: 2rem;
         }
     }
 }

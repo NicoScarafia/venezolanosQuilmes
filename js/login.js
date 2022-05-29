@@ -11,10 +11,6 @@ window.addEventListener('load', function() {
         sessionStorage.setItem("usuarioSV", "");
     }
 
-    const hero = document.querySelector(".hero-section");
-    hero.style.height = "8rem";
-    hero.style.minHeight = "0rem";
-
     let userLog;
     let usersData;
 
@@ -30,7 +26,7 @@ window.addEventListener('load', function() {
 
         if(JSON.parse(sessionStorage.getItem("sudoSV"))){
             document.querySelector("#addUser").style.display = "block";
-
+            document.querySelector(".contactData").style.display = "block"
         } else {
             document.querySelector("#addUser").style.display = "none";
         }
@@ -81,6 +77,7 @@ window.addEventListener('load', function() {
 
                 if(userData.data().sudo === true){
                     document.querySelector("#addUser").style.display = "block";
+                    document.querySelector(".contactData").style.display = "block"
                     sessionStorage.setItem("sudoSV", true);
                 } else {
                     document.querySelector("#addUser").style.display = "none";
@@ -284,6 +281,7 @@ window.addEventListener('load', function() {
         document.querySelector(".activitiesAdm").style.display = "none";
         document.querySelector("#changePassUser").style.display = "none";
         document.querySelector("#closeSession").style.display = "none";
+        document.querySelector(".contactData").style.display = "none"
         document.querySelector(".login").innerHTML = "Log in";
         user.value = "";
         pass.value = "";

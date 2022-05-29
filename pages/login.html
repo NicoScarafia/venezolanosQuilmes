@@ -7,6 +7,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Title -->
     <title>Somos Venezolanos en Quilmes | Login</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
@@ -24,9 +26,34 @@
             <a class="link-right" href="calendar.html">Calendario</a>
             <a class="link-right login" href="#">Log In</a>
         </nav>
+
+        <!-- Mobile Navbar -->
+        <nav class="mobile_navbar">
+            <a href="/">
+                <img class="main-logo" src="../assets/logo.png" alt="Logo Somos Venezolanos en Quilmes">
+            </a>
+            <i id="mobileNavMenu" class="fa-solid fa-bars"></i>
+        </nav>
+        <div id="mobile_navlist" class="mobile_navlist translateObj">
+            <div class="list">
+                <div id="closeMobileNav" class="list-close">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="main-list">
+                    <a class="link-left" href="../index.html#about">Nosotros</a>
+                    <a class="link-left" href="../index.html#actividades">Actividades</a>
+                    <a class="link-right" href="../index.html#redes">Nuestras Redes</a>
+                    <a class="link-right" href="calendar.html">Calendario</a>
+                </div>
+                <div class="login-list">
+                    <a class="link-right login" href="login.html">Log In</a>
+                </div>
+            </div>
+        </div>
+
     </header>
     
-    <div class="hero-section">
+    <div class="brand">
         <img src="../assets/img/somosvenezolanos.jpg">
     </div>
 
@@ -66,19 +93,27 @@
 
             <div class="addUserInput">
                 <form>
-                    <label for="newUser">Usuario: </label>
-                    <input class="inputText" type="text" name="newUser" id="newUser">
+                    <div>
+                        <label for="newUser">Usuario: </label>
+                        <input class="inputText" type="text" name="newUser" id="newUser">
+                    </div>
+                    <div>
+                        <label class="inputText" for="password0">Contraseña: </label>
+                        <input class="inputText" type="password" name="pass0" id="pass0">
+                    </div>
+                    <div>
+                        <label for="password1">Repita Contraseña: </label>
+                        <input class="inputText" type="password" name="pass1" id="pass1">
+                        <img class="redCross" src="../assets/img/redCross.png" alt="">
+                        <img class="greenCheck" src="../assets/img/greenCheck.png" alt="">
+                    </div>
 
-                    <label class="inputText" for="password0">Contraseña: </label>
-                    <input class="inputText" type="password" name="pass0" id="pass0">
-                    <label for="password1">Repita Contraseña: </label>
-                    <input class="inputText" type="password" name="pass1" id="pass1">
-                    <img class="redCross" src="../assets/img/redCross.png" alt="">
-                    <img class="greenCheck" src="../assets/img/greenCheck.png" alt="">
                     <input class="sudo" type="checkbox" name="sudo" id="sudo"> Superusuario
-                    <button type="submit" id="confirmUser">Agregar</button>
 
-                    <button id="addUserClose">X</button>
+                    <div>
+                        <button type="submit" id="confirmUser">Agregar</button>
+                        <button id="addUserClose">Cancelar</button>
+                    </div>
                 </form>
 
                 <h4 class="addUserMsj"></h4>
@@ -95,14 +130,19 @@
                 
                 <form id="changePassUser">
                     <div>
-                        <label for="currentPass">Contraseña Actual: <input type="password" name="currentPass" id="currentPass"></label>
+                        <label for="currentPass">Contraseña Actual:</label>
+                        <input type="password" name="currentPass" id="currentPass">
                     </div>
                     
                     <div>
-                        <label for="newPass0">Contraseña Nueva: <input type="password" name="NewPass0" id="newPass0"></label>                    
-                        <label for="newPass1">Repita Contraseña Nueva: <input type="password" name="newPass1" id="newPass1"></label>
+                        <label for="newPass0">Contraseña Nueva: </label>          
+                        <input type="password" name="NewPass0" id="newPass0">          
                     </div>
 
+                    <div>
+                        <label for="newPass1">Repita Contraseña Nueva: </label>
+                        <input type="password" name="newPass1" id="newPass1">
+                    </div>
                     <h4 id="changePassMsj"></h4>
 
                     <div>
@@ -113,13 +153,22 @@
                 </form>
             </div>
         </section>
+
+        <section class="contactData">
+            <form>
+                <div>
+                    <label for="whatsapp">Whatsapp: </label>
+                    <input type="text" name="whatsapp" id="whatsappNum">
+                </div>
+            </form>
+        </section>
         
         <section class="activitiesAdm">
             <h2>Agregar nueva actividad:</h2>
 
             <div class="uploader">
                 <form action="" id="uploader">
-                    <div>
+                    <div class="uploaderText">
                         <label for="title">Titulo </label>
                         <input type="text" name="title" id="uploaderTitle">
                         <label for="description">Detalle </label>
@@ -127,17 +176,17 @@
                         <label for="link">Link </label>
                         <input type="text" name="link" id="uploaderLink">
 
-                        <input type="file" name="image" id="image">
-                        
-                        <div id="uplMsj"></div>
-                        <button type="submit" id="upload">Subir Publicación</button>
+                        <input type="file" name="image" id="image">                       
+                    </div>
+
+                    <div class="imagenDown">
+                        <img id="imagenDown" src="" alt="">
                     </div>
                 </form>
 
-                <div class="imagenDown">
-                    <img id="imagenDown" src="" alt="">
-                </div>
+                <div id="uplMsj"></div>
                 
+                <button type="submit" id="upload">Subir Publicación</button>
             </div>
         </section>
     </main>
@@ -158,5 +207,6 @@
     
 
     <script type="module" src="../js/login.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>

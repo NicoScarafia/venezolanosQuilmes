@@ -647,13 +647,13 @@ a {
   flex-direction: column;
   position: fixed;
   z-index: 3;
-  top: 18rem;
-  right: 45rem;
+  top: 30vh;
+  left: 30vw;
   background-color: #e7d7d3;
   height: auto;
-  width: 40rem;
+  width: 40vw;
   border: 1px solid black;
-  box-shadow: 10px 10px 15px black;
+  box-shadow: 10px 10px 15px #f14143;
   border-radius: 10px;
 }
 .detail .detailHead {
@@ -672,7 +672,7 @@ a {
   transform: scale(0.9);
 }
 .detail .detailUl {
-  margin-left: 3rem;
+  margin: 3rem;
 }
 .detail .detailUl li {
   display: flex;
@@ -706,7 +706,7 @@ a {
   background-color: #e7d7d3;
   border: 1px solid #e7d7d3;
   border-radius: 10px;
-  box-shadow: 5px 5px 30px darkgrey;
+  box-shadow: 5px 5px 30px #f14143;
 }
 .month h3 {
   font-size: 3rem;
@@ -770,6 +770,16 @@ a {
   cursor: pointer;
 }
 
+@media all and (max-width: 1200px) {
+  .year {
+    grid-template-columns: 1fr;
+  }
+
+  .detail {
+    width: 60vw;
+    left: 20vw;
+  }
+}
 .mainAdmin {
   width: 100%;
   display: flex;
@@ -777,7 +787,6 @@ a {
   align-items: center;
   background-color: #e7d7d3;
   min-height: 100vh;
-  height: fit-content;
 }
 .mainAdmin .loginAdm {
   width: 100%;
@@ -833,59 +842,69 @@ a {
 }
 .mainAdmin .usersAdm {
   display: none;
+  align-items: center;
+  justify-content: center;
   width: 60%;
   margin-top: 2rem;
 }
 .mainAdmin .usersAdm .userAdmTitle {
   display: flex;
+  width: 100%;
   margin-bottom: 1rem;
 }
 .mainAdmin .usersAdm .userAdmTitle h2 {
-  width: 70%;
+  text-align: center;
+  width: calc(100% - 10rem);
 }
 .mainAdmin .usersAdm .userAdmTitle button {
   height: 1.5rem;
-  margin-right: 1rem;
   padding: 0 0.5rem;
 }
 .mainAdmin .usersAdm .userAdmTitle #addUser {
   display: none;
+  width: 10rem;
 }
 .mainAdmin .usersAdm .addUserInput {
   display: none;
+  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
-.mainAdmin .usersAdm .addUserInput label {
-  margin-left: 1rem;
+.mainAdmin .usersAdm .addUserInput div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  width: 18rem;
+  margin-bottom: 0.5rem;
 }
 .mainAdmin .usersAdm .addUserInput .inputText {
   width: 8rem;
-  margin-left: 0.5rem;
+  margin-left: 0rem;
 }
 .mainAdmin .usersAdm .addUserInput .redCross, .mainAdmin .usersAdm .addUserInput .greenCheck {
   display: none;
   width: 15px;
 }
 .mainAdmin .usersAdm .addUserInput .sudo {
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
 .mainAdmin .usersAdm .addUserInput #confirmUser {
+  margin-top: 2rem;
+  margin-left: calc((100% - 11rem) / 2);
+  width: 5rem;
   height: 1.5rem;
-  margin-left: 3rem;
   padding: 0 0.5rem;
 }
 .mainAdmin .usersAdm .addUserInput #addUserClose {
-  border-radius: 0.65rem;
-  width: 1.3rem;
-  height: 1.3rem;
-  color: white;
-  background-color: red;
-  border: 1px solid red;
-  margin-left: 0.5rem;
-}
-.mainAdmin .usersAdm .addUserInput #addUserClose:active {
-  transform: scale(0.9);
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 5rem;
+  height: 1.5rem;
+  padding: 0 0.5rem;
 }
 .mainAdmin .usersAdm .addUserInput .addUserMsj {
   width: 100%;
@@ -893,13 +912,15 @@ a {
   text-align: center;
 }
 .mainAdmin .usersAdm .userAdmUl {
-  margin: 2rem 0 0 5rem;
+  margin-top: 2rem;
+  margin-left: calc((100% - 20rem) / 2);
+  list-style: none;
 }
 .mainAdmin .usersAdm .userAdmUl li {
   display: flex;
   justify-content: space-between;
   width: 20rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .mainAdmin .usersAdm .userAdmUl li .delete {
   height: 1.5rem;
@@ -909,37 +930,56 @@ a {
 .mainAdmin .usersAdm .activeUser {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 3rem;
+  width: 100%;
 }
 .mainAdmin .usersAdm .activeUser div {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .mainAdmin .usersAdm .activeUser div h3 {
-  min-width: 30rem;
+  width: calc(100% - 10rem);
+  text-align: center;
 }
 .mainAdmin .usersAdm .activeUser div h3 .logedUser {
   color: #02bb02;
   margin-left: 2rem;
 }
-.mainAdmin .usersAdm .activeUser div button {
+.mainAdmin .usersAdm .activeUser div .changePass {
+  width: 10rem;
   height: 1.5rem;
-  margin-right: 1rem;
   padding: 0 0.5rem;
 }
 .mainAdmin .usersAdm .activeUser form {
   display: none;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
 }
-.mainAdmin .usersAdm .activeUser form label {
-  margin: 1rem;
+.mainAdmin .usersAdm .activeUser form div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  width: 25rem;
+  margin-bottom: 0.5rem;
+}
+.mainAdmin .usersAdm .activeUser form div .inputText {
+  width: 8rem;
+  margin-left: 0rem;
 }
 .mainAdmin .usersAdm .activeUser form #confirmChangeP, .mainAdmin .usersAdm .activeUser form #cancelChangeP {
-  margin-left: 15rem;
   width: 5rem;
   height: 1.5rem;
-  margin-top: 1rem;
+  margin: 1rem 4rem;
   padding: 0 0.5rem;
+}
+.mainAdmin .contactData {
+  display: none;
+  margin-top: 2rem;
 }
 .mainAdmin .activitiesAdm {
   display: none;
@@ -951,12 +991,14 @@ a {
 }
 .mainAdmin .activitiesAdm .uploader {
   display: flex;
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  width: 60rem;
   margin-top: 2rem;
 }
 .mainAdmin .activitiesAdm .uploader #uploader {
-  width: 60%;
-  height: 25rem;
+  display: flex;
+  width: 100%;
 }
 .mainAdmin .activitiesAdm .uploader #uploader div {
   display: flex;
@@ -980,23 +1022,32 @@ a {
   text-align: center;
   height: 1rem;
 }
-.mainAdmin .activitiesAdm .uploader #uploader div button {
-  align-self: center;
-  margin-top: 1rem;
-  width: 10rem;
-  height: 1.5rem;
-  padding: 0 0.5rem;
+.mainAdmin .activitiesAdm .uploader #uploader .uploaderText {
+  width: 30rem;
 }
-.mainAdmin .activitiesAdm .uploader .imagenDown {
+.mainAdmin .activitiesAdm .uploader #uploader .imagenDown {
   display: flex;
   background-color: white;
   justify-content: center;
-  width: 70%;
+  width: 30rem;
   height: 25rem;
   margin-left: 2rem;
   border: 1px solid black;
 }
+.mainAdmin .activitiesAdm .uploader #upload {
+  width: 15rem;
+  margin-top: 2rem;
+}
 
+@media all and (max-width: 1000px) {
+  #uploader {
+    flex-direction: column;
+    align-items: center;
+  }
+  #uploader .imagenDown {
+    margin-right: 2rem;
+  }
+}
 #redes {
   margin: 6rem auto;
 }
@@ -1187,7 +1238,6 @@ footer .footer_contacto ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 3rem;
 }
 #main_actividades-page #actividades_page_section .actividades_link-page {
   margin: 1.5rem auto;
@@ -1279,20 +1329,25 @@ footer .footer_contacto ul {
 #main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .del {
   display: none;
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 750px) {
   #main_actividades-page #actividades_page_section .actividades_content-page {
-    padding: 0 1rem;
+    width: 100vw;
+    padding: 0 0rem;
   }
   #main_actividades-page #actividades_page_section .actividades_card-page {
     display: flex;
     flex-direction: column;
-    max-width: 35rem;
+    width: 90%;
     height: auto;
-    width: 98%;
   }
   #main_actividades-page #actividades_page_section .actividades_card-page .card_image-page {
-    width: 10rem;
+    width: 80vw;
+    height: 80vw;
     margin: 0 auto;
+  }
+  #main_actividades-page #actividades_page_section .actividades_card-page .card_text-page {
+    width: 100%;
+    align-items: center;
   }
   #main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
     margin: 1.5rem auto 1rem auto;
@@ -1312,7 +1367,6 @@ footer .footer_contacto ul {
     padding: 1.2rem 1.4rem;
   }
   #main_actividades-page #actividades_page_section .actividades_card-page .card_image-page {
-    width: 10rem;
     margin: 0 auto;
   }
   #main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
