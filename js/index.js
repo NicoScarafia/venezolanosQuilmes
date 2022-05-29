@@ -1,4 +1,4 @@
-import { doc, collection, getDocs, orderBy, limit, query, deleteDoc } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
+import { doc, collection, getDocs, getDoc, orderBy, limit, query, deleteDoc } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js";
 import { db } from "./config.js";
 
@@ -15,6 +15,17 @@ window.addEventListener('load', function() {
     } else {
         document.querySelector(".login").innerHTML = "Log in";
     }
+
+    updateWhats();
+    console.log("hola");
+
+    async function updateWhats() {
+        getDoc(doc(db, "ContactData", "Whatsapp"))
+        .then((resp) => {
+            document.querySelector("#whatsappLink").href = "https://api.whatsapp.com/send?phone=" + resp.data().number;
+        })
+    }
+    
 
 
     const actividades_content = document.querySelector(".actividades_content");
@@ -39,7 +50,6 @@ window.addEventListener('load', function() {
         await getDocs(query(collection(db, "Activities"), orderBy("date", "desc"), limit(6)))
             .then((resp) => {
                 fileData = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
-                console.log(fileData);
                 loadActiv();
             })
     }
@@ -48,7 +58,6 @@ window.addEventListener('load', function() {
         console.log("start");
         for(let i = 0; i < fileData.length; i++){
             let dateid = fileData[i].date.seconds.toString();
-            console.log(dateid);
 
             const actividades_card = document.createElement("div");
             actividades_card.className = "actividades_card";
@@ -144,7 +153,7 @@ window.addEventListener('load', function() {
             del.className = "del";
 
             if(JSON.parse(sessionStorage.getItem("sudoSV"))){
-                console.log("sudo");
+
                 del.style.display = "block";
             } else {
                 del.style.display = "none";
@@ -158,7 +167,6 @@ window.addEventListener('load', function() {
         }
 
         actividades_content.style.display = "flex";
-        actividades_link.style.display = "block";
         console.log("end");
     }
 
@@ -167,7 +175,6 @@ window.addEventListener('load', function() {
 
         getDownloadURL(pathRef)
             .then((url) => {
-                console.log(url);
                 img.src = url;
             })
     }
@@ -182,8 +189,6 @@ window.addEventListener('load', function() {
             .then(() => {
                 document.querySelector("#" + actId).remove()
             })
-    }
-
-    
+    }   
 
 },false)

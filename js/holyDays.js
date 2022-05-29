@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
     function Img() {
         const imgSet = document.createElement("img");
         imgSet.src =  document.querySelector("#imgInput").value;
-        console.log(imgSet.src);
+
         if(document.querySelector("#imgSet").hasChildNodes()){
             document.querySelector("#imgSet").removeChild(document.querySelector("#imgSet").firstChild);
         }
@@ -67,7 +67,6 @@ window.addEventListener('load', function() {
         } else {
 
             let id = arrayMonth[m-1].slice(0,3) + d;
-            console.log(id);
             let consult;
 
             try {
@@ -134,10 +133,9 @@ window.addEventListener('load', function() {
         try {
             await getDocs(collection(db, "Celebrations")) 
                 .then((resp) =>{
-                    console.log(resp.docs);
                     days = resp.docs.map((docu) => ({id: docu.id, ...docu.data()}));
-                    console.log(days);
                 })
+
         } catch (err){
             document.querySelector(".msj").innerHTML = "¡Hubo un error! Intentenlo otra vez.";
             console.error(err);
@@ -181,7 +179,7 @@ window.addEventListener('load', function() {
         let dayData;
 
         for(let d = 0; d < days.length; d++) {
-            console.log(days[d].id);
+
             if (days[d].id == id){
                 dayData = {
                     celebration: days[d].celebration,
@@ -190,9 +188,6 @@ window.addEventListener('load', function() {
                 break;
             } 
         }
-        
-
-        console.log(dayData);
 
         for(let i = 0; i < dayData.celebration.length; i++){
             const li = document.createElement("li");
@@ -246,7 +241,6 @@ window.addEventListener('load', function() {
             console.error(err);
         }
 
-        console.log(id);
         document.querySelector("#" + id).remove();
     }
 

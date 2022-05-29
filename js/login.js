@@ -53,8 +53,6 @@ window.addEventListener('load', function() {
         let userData;
 
         try {
-            console.log(u);
-            console.log(p);
             userData = await getDoc(doc(db, "Users", u))
 
         } catch (err){            
@@ -62,11 +60,6 @@ window.addEventListener('load', function() {
         }
 
         if(userData.exists()){
-            console.log(userData);
-            console.log(u);
-            console.log(p);
-            console.log(userData.data());
-            console.log(userData.data().sudo);
 
             if(userData.data().pass == p){
                 sessionStorage.setItem("loginSomosVen", true);
@@ -105,7 +98,6 @@ window.addEventListener('load', function() {
                 .then(
                     (resp) => {
                         usersData = resp.docs.map((doc) => ({id: doc.id}));
-                        console.log(usersData);
                         
                         for(let i = 0; i < usersData.length; i++){
                             const userLi = document.createElement("li");
@@ -165,7 +157,7 @@ window.addEventListener('load', function() {
     async function changePassword(cp, p0, p1) {
         let us = await getDoc(doc(db, "Users", sessionStorage.getItem("usuarioSV")))
         const changePassMsj = document.querySelector("#changePassMsj");
-        console.log(us);
+
         if(us.data().pass === cp) {
             if(p0 === p1 && p0 !== ""){
                 await updateDoc(doc(db, "Users", (sessionStorage.getItem("usuarioSV"))), {
@@ -255,9 +247,7 @@ window.addEventListener('load', function() {
     closeSession.onclick = () => {close()}
 
     function check(us, p0, p1) {
-        console.log(p0);
-        console.log(p1);
-        console.log(us);
+
         if(p0 !== p1 || p0 === "" || p1 === "" || us === ""){
             return false;
         } 
@@ -303,7 +293,7 @@ window.addEventListener('load', function() {
     const linkUpl = document.querySelector("#uploaderLink");
 
     function mostrar() {
-        console.log(fileInput.file);
+
         const filesPreview = fileInput.files;
 
         if (!filesPreview || !filesPreview.length) {
@@ -311,13 +301,41 @@ window.addEventListener('load', function() {
             return;
         }
         
-        console.log(filesPreview);
         const filePreview = filesPreview[0];
         const urlFile = URL.createObjectURL(filePreview);
 
         document.querySelector("#imagenDown").src = urlFile;
     }
 
+    const changeWhats = document.querySelector("#changeWhats");
+    changeWhats.onclick = (e) => {
+        e.preventDefault();
+        updateWhats(document.querySelector("#whatsappNum").value);
+    }
+
+    async function updateWhats(num) {
+        await updateDoc(doc(db, "ContactData", "Whatsapp"), {
+            number: num
+        })
+            .then(() => {
+                document.querySelector("#msjWhats").innerHTML = "Numero actualizado!"
+            })
+    }
+
+    const email = document.querySelector("#changeEmail");
+    email.onclick = (e) => {
+        e.preventDefault();
+        updateEmail(document.querySelector("#email").value);
+    }
+
+    async function updateEmail(mail) {
+        await updateDoc(doc(db, "ContactData", "Email"), {
+            mail: mail
+        })
+            .then(() => {
+                document.querySelector("#msjEmail").innerHTML = "Email actualizado!"
+            })
+    }
 
     const uplMsj = document.createElement("h4");
     
@@ -325,8 +343,6 @@ window.addEventListener('load', function() {
         e.preventDefault();
 
         let fileInput = form.querySelector("#image");
-
-        console.log(fileInput.files);
 
         let file = fileInput.files[0];
 

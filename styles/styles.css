@@ -979,7 +979,16 @@ a {
 }
 .mainAdmin .contactData {
   display: none;
+}
+.mainAdmin .contactData form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 2rem;
+}
+.mainAdmin .contactData form h3 {
+  text-align: center;
+  margin-top: 0.5rem;
 }
 .mainAdmin .activitiesAdm {
   display: none;

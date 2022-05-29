@@ -70,7 +70,6 @@ window.addEventListener('load', function() {
         console.log("start");
         for(let i = 0; i < fileData.length; i++){
             let dateid = fileData[i].date.seconds.toString();
-            console.log(dateid);
 
             const actividades_card = document.createElement("div");
             actividades_card.className = "actividades_card-page";
@@ -167,7 +166,7 @@ window.addEventListener('load', function() {
             del.className = "del";
 
             if(JSON.parse(sessionStorage.getItem("sudoSV"))){
-                console.log("sudo");
+
                 del.style.display = "block";
             } else {
                 del.style.display = "none";
@@ -176,8 +175,6 @@ window.addEventListener('load', function() {
             del.onclick = () => {eliminar(fileData[i].id, "actividades_card" + dateid)}
 
             document.querySelector("#card_text" + dateid).appendChild(del);
-
-            console.log(actividades_content);
         }
 
         console.log("end");
@@ -189,7 +186,6 @@ window.addEventListener('load', function() {
 
         getDownloadURL(pathRef)
             .then((url) => {
-                console.log(url);
                 img.src = url;
             })
     }
