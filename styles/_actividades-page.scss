@@ -1,15 +1,26 @@
-#main_actividades {
+.linkWhatsapp {
+    height: 0;
+}
+
+
+#main_actividades-page {
+
     h1 {
-        @include PageTitle
+        @include PageTitle;
+        margin: 0 auto 2rem auto;
+        padding-top: 3rem;
     }
 
     #actividades_page_section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: white;
-        margin: 3rem auto -2rem auto;
+        margin: 0rem auto -2rem auto;
         padding: 2.3rem 0;
+
+        h1 {
+            margin:auto
+        }
 
         #cargarMas{
             @include CustomButton($red, $yellow);
@@ -29,7 +40,7 @@
             margin-top: 3rem;
         }
     
-        .actividades_content {
+        .actividades_content-page {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -37,7 +48,7 @@
             padding: 0 3rem;
         }
     
-        .actividades_link {
+        .actividades_link-page {
             margin: 1.5rem auto;
             @include CustomButton($red, $yellow);
     
@@ -51,7 +62,7 @@
             }
         }
     
-        .actividades_card {
+        .actividades_card-page {
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
@@ -65,7 +76,7 @@
             border-radius: 1.5rem;
     
             .card_image-page {
-                min-width: 11rem; height: auto;
+                width: 30rem; height: 30rem;
                 margin-right: 1.5rem;
                 
                 img {
@@ -74,23 +85,23 @@
                 }
             }
     
-            .card_text {
+            .card_text-page {
                 display: flex;
                 flex-direction: column;
-                
+                width: 70%;
+                height: 100%;
     
-                .card_heading {
+                .card_heading-page {
                     height: 3rem;
                     font-size: 1.3rem;
                     font-weight: 600;
                 }
 
-                .card_date {
+                .card_date-page {
                     margin: 0.8rem 0;
                     font-family: $text-font;
                     font-size: 0.88rem;
                     color: rgb(99, 99, 99);
-                    
                     font-weight: 600;
     
                     i{
@@ -98,19 +109,16 @@
                     }
                 }
 
-                .card_main-text {
+                .card_main-text-page {
+                    height: auto;
                     font-family: $text-font;
                     font-size: 0.88rem;
                     font-weight: 500;
                     line-height: 1.4rem;
                     text-align: justify;
-    
-                    .verMas {
-                        text-decoration: underline;
-                        color: $blue;
-                    }
                 }
-                .card_link {
+
+                .card_link-page {
                     display: flex;
                     justify-content: end;
                     font-size: 1.1rem;
@@ -139,23 +147,23 @@
     
     @media all and (max-width: 700px) {
         #actividades_page_section  {
-            .actividades_content {
+            .actividades_content-page {
                 padding: 0 1rem;
             }
             
-            .actividades_card {
+            .actividades_card-page {
                 display: flex;
                 flex-direction: column;
                 max-width: 35rem; height: auto;
                 width: 98%;;
     
-                .card_image {
+                .card_image-page {
                     width: 10rem;
                     margin: 0 auto;
                 }
         
-                .card_text {
-                    .card_heading {
+                .card_text-page {
+                    .card_heading-page {
                         margin: 1.5rem auto 1rem auto;
                         text-align: center;
                     }
@@ -167,24 +175,24 @@
     @media all and (max-width: 520px) {
         #actividades_page_section  {
     
-            .actividades_content {
+            .actividades_content-page {
                 padding: 0 1rem;
             }
     
-            .actividades_card {
+            .actividades_card-page {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 max-width: 100%; height: auto;
                 padding: 1.2rem 1.4rem;
     
-                .card_image {
+                .card_image-page {
                     width: 10rem;
                     margin: 0 auto;
                 }
         
-                .card_text {
-                    .card_heading {
+                .card_text-page {
+                    .card_heading-page {
                         margin: 1.5rem auto 1rem auto;
                         text-align: center;
                     }

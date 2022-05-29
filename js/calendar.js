@@ -5,10 +5,6 @@ window.addEventListener('load', function() {
         sessionStorage.setItem("usuarioSV", "");
     }
 
-    const hero = document.querySelector(".hero-section");
-    hero.style.height = "8rem";
-    hero.style.minHeight = "0rem";
-
     const year = document.createElement("div");
     year.className = "year";
     document.querySelector("#calendar").appendChild(year);
@@ -124,7 +120,7 @@ window.addEventListener('load', function() {
     }    
 
     function hoverIn(id) {
-        document.querySelector("#" + id).style.border = "3px solid gold";
+        document.querySelector("#" + id).style.border = "3px solid #f14143";
     }
 
     function hoverOut(id) {

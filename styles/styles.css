@@ -548,8 +548,6 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #f14143;
-  border: 1px solid #f14143;
 }
 #calendar .title {
   display: flex;
@@ -708,7 +706,7 @@ a {
   background-color: #e7d7d3;
   border: 1px solid #e7d7d3;
   border-radius: 10px;
-  box-shadow: 10px 10px 40px black;
+  box-shadow: 5px 5px 30px darkgrey;
 }
 .month h3 {
   font-size: 3rem;
@@ -735,9 +733,6 @@ a {
   column-gap: 0.25rem;
   row-gap: 0.25rem;
   padding: 0.5rem;
-}
-.month .dayGrid div:hover {
-  transform: scale(1.1);
 }
 .month .dayGrid .day {
   display: flex;
@@ -1130,22 +1125,30 @@ footer .footer_contacto ul {
   background-color: #075E54;
 }
 
-#main_actividades h1 {
+.linkWhatsapp {
+  height: 0;
+}
+
+#main_actividades-page h1 {
   text-transform: uppercase;
   color: #141720;
   font-size: 3rem;
   text-align: center;
   margin: 3rem auto 2rem auto;
+  margin: 0 auto 2rem auto;
+  padding-top: 3rem;
 }
-#main_actividades #actividades_page_section {
+#main_actividades-page #actividades_page_section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  margin: 3rem auto -2rem auto;
+  margin: 0rem auto -2rem auto;
   padding: 2.3rem 0;
 }
-#main_actividades #actividades_page_section #cargarMas {
+#main_actividades-page #actividades_page_section h1 {
+  margin: auto;
+}
+#main_actividades-page #actividades_page_section #cargarMas {
   width: 7rem;
   background-color: #f14143;
   padding: 0.5rem;
@@ -1154,11 +1157,11 @@ footer .footer_contacto ul {
   text-align: center;
   transition: all 0.3s;
 }
-#main_actividades #actividades_page_section #cargarMas:hover {
+#main_actividades-page #actividades_page_section #cargarMas:hover {
   color: #e7d7d3;
   background-color: #feee4e;
 }
-#main_actividades #actividades_page_section h2 {
+#main_actividades-page #actividades_page_section h2 {
   font-family: "Signika Negative", sans-serif;
   color: #141720;
   font-size: 3.3rem;
@@ -1168,25 +1171,25 @@ footer .footer_contacto ul {
   color: white;
 }
 @media screen and (max-width: 960px) {
-  #main_actividades #actividades_page_section h2 {
+  #main_actividades-page #actividades_page_section h2 {
     font-size: 2.8rem;
     text-align: center;
     padding: 0;
   }
 }
-#main_actividades #actividades_page_section .carga {
+#main_actividades-page #actividades_page_section .carga {
   justify-items: center;
   text-align: start;
   width: 20rem;
   margin-top: 3rem;
 }
-#main_actividades #actividades_page_section .actividades_content {
+#main_actividades-page #actividades_page_section .actividades_content-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 3rem;
 }
-#main_actividades #actividades_page_section .actividades_link {
+#main_actividades-page #actividades_page_section .actividades_link-page {
   margin: 1.5rem auto;
   width: 7rem;
   background-color: #f14143;
@@ -1196,18 +1199,18 @@ footer .footer_contacto ul {
   text-align: center;
   transition: all 0.3s;
 }
-#main_actividades #actividades_page_section .actividades_link:hover {
+#main_actividades-page #actividades_page_section .actividades_link-page:hover {
   color: #e7d7d3;
   background-color: #feee4e;
 }
-#main_actividades #actividades_page_section .actividades_link a {
+#main_actividades-page #actividades_page_section .actividades_link-page a {
   color: white;
   font-weight: 500;
 }
-#main_actividades #actividades_page_section .actividades_link a:hover {
+#main_actividades-page #actividades_page_section .actividades_link-page a:hover {
   color: black;
 }
-#main_actividades #actividades_page_section .actividades_card {
+#main_actividades-page #actividades_page_section .actividades_card-page {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -1218,90 +1221,89 @@ footer .footer_contacto ul {
   padding: 1rem 1.8rem;
   border-radius: 1.5rem;
 }
-#main_actividades #actividades_page_section .actividades_card .card_image-page {
-  min-width: 11rem;
-  height: auto;
+#main_actividades-page #actividades_page_section .actividades_card-page .card_image-page {
+  width: 30rem;
+  height: 30rem;
   margin-right: 1.5rem;
 }
-#main_actividades #actividades_page_section .actividades_card .card_image-page img {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_image-page img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page {
   display: flex;
   flex-direction: column;
+  width: 70%;
+  height: 100%;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .card_heading {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
   height: 3rem;
   font-size: 1.3rem;
   font-weight: 600;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .card_date {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_date-page {
   margin: 0.8rem 0;
   font-family: "Roboto", sans-serif;
   font-size: 0.88rem;
   color: #636363;
   font-weight: 600;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .card_date i {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_date-page i {
   margin-right: 0.2rem;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .card_main-text {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_main-text-page {
+  height: auto;
   font-family: "Roboto", sans-serif;
   font-size: 0.88rem;
   font-weight: 500;
   line-height: 1.4rem;
   text-align: justify;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .card_main-text .verMas {
-  text-decoration: underline;
-  color: #0a5aa2;
-}
-#main_actividades #actividades_page_section .actividades_card .card_text .card_link {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_link-page {
   display: flex;
   justify-content: end;
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .card_link i {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_link-page i {
   background-color: #0a5aa2;
   color: white;
   padding: 0.4rem;
   border-radius: 1rem;
   transition: 0.2s all;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .card_link i:hover {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_link-page i:hover {
   background-color: #f14143;
 }
-#main_actividades #actividades_page_section .actividades_card .card_text .del {
+#main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .del {
   display: none;
 }
 @media all and (max-width: 700px) {
-  #main_actividades #actividades_page_section .actividades_content {
+  #main_actividades-page #actividades_page_section .actividades_content-page {
     padding: 0 1rem;
   }
-  #main_actividades #actividades_page_section .actividades_card {
+  #main_actividades-page #actividades_page_section .actividades_card-page {
     display: flex;
     flex-direction: column;
     max-width: 35rem;
     height: auto;
     width: 98%;
   }
-  #main_actividades #actividades_page_section .actividades_card .card_image {
+  #main_actividades-page #actividades_page_section .actividades_card-page .card_image-page {
     width: 10rem;
     margin: 0 auto;
   }
-  #main_actividades #actividades_page_section .actividades_card .card_text .card_heading {
+  #main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
     margin: 1.5rem auto 1rem auto;
     text-align: center;
   }
 }
 @media all and (max-width: 520px) {
-  #main_actividades #actividades_page_section .actividades_content {
+  #main_actividades-page #actividades_page_section .actividades_content-page {
     padding: 0 1rem;
   }
-  #main_actividades #actividades_page_section .actividades_card {
+  #main_actividades-page #actividades_page_section .actividades_card-page {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1309,11 +1311,11 @@ footer .footer_contacto ul {
     height: auto;
     padding: 1.2rem 1.4rem;
   }
-  #main_actividades #actividades_page_section .actividades_card .card_image {
+  #main_actividades-page #actividades_page_section .actividades_card-page .card_image-page {
     width: 10rem;
     margin: 0 auto;
   }
-  #main_actividades #actividades_page_section .actividades_card .card_text .card_heading {
+  #main_actividades-page #actividades_page_section .actividades_card-page .card_text-page .card_heading-page {
     margin: 1.5rem auto 1rem auto;
     text-align: center;
   }

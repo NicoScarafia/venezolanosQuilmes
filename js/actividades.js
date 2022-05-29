@@ -130,7 +130,7 @@ window.addEventListener('load', function() {
             span.innerHTML = "Publicado el " + fileData[i].date.toDate().toLocaleDateString('en-GB');
             card_main_text.id = "card_main_text" + dateid;
             act_texto.id = "act_texto" + dateid;
-            act_texto.innerHTML = fileData[i].description.slice(0,370) + "...";
+            act_texto.innerHTML = fileData[i].description;
             card_link.id = "card_link" + dateid;
             act_link.id = "act_link" + dateid;
             act_link.href = fileData[i].link
