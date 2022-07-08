@@ -7,4 +7,3 @@ let closeMobileNav = document.querySelector('#closeMobileNav')
 closeMobileNav.addEventListener('click', () => {mobileNavlist.classList.remove('translateObjActive')})
 
 window.onscroll = () => { mobileNavlist.classList.remove('translateObjActive') }
-

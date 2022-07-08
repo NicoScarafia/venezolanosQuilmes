@@ -1,0 +1,336 @@
+.mainAdmin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light;
+    min-height: 100vh;
+    
+    .loginAdm{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        #closeSession {
+            display: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+            padding-right: 2rem;
+
+            button {
+                margin-left: 2rem;
+                margin-top: 1rem;
+                height: 1.5rem;
+                padding: 0 0.5rem;
+            }
+        }
+    
+        #login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 2rem;
+
+            .inputLog {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+
+                label {
+                    margin-right: 1rem;
+                }
+
+                input {
+                    width: 10rem;
+                }
+            }
+
+            .msj {
+                height: 2rem;
+                text-align: center;
+            }
+
+            .inputSubmit {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    height: 1.5rem;
+                    padding: 0 0.5rem;
+                }
+            }
+
+            
+        }
+    }
+
+    .usersAdm {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 60%; 
+        margin-top: 2rem;
+
+        .userAdmTitle {
+            display: flex;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            h2 {
+                text-align: center;
+                width: calc(100% - 10rem);
+            }
+
+            button {
+                height: 1.5rem;
+                padding: 0 0.5rem;
+            } 
+            
+            #addUser {
+                display: none;
+                width: 10rem;
+            }
+        }
+
+        .addUserInput {
+            display: none;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            
+
+            div {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                width: 18rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .inputText {
+                width: 8rem;
+                margin-left: 0rem;
+            }
+
+            .redCross, .greenCheck {
+                display: none;
+                width: 15px;
+            }
+
+            .sudo {
+                margin-left: 2rem;
+                margin-top: 1rem;
+            }
+
+            #confirmUser {
+                margin-top: 2rem;
+                margin-left: calc((100% - 11rem) /2);
+                width: 5rem;
+                height: 1.5rem;
+                padding: 0 0.5rem;
+            }
+
+            #addUserClose {
+                margin-top: 2rem;
+                margin-left: 1rem;
+                width: 5rem;
+                height: 1.5rem;
+                padding: 0 0.5rem;
+            }
+
+            .addUserMsj {
+                width: 100%;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+
+        .userAdmUl {
+            margin-top: 2rem;
+            margin-left: calc((100% - 20rem) /2);
+            list-style: none;
+
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                width: 20rem;
+                margin-bottom: 0.5rem;
+
+                .delete {
+                    height: 1.5rem;
+                    margin-right: 1rem;
+                    padding: 0 0.5rem;
+                }
+            }
+
+        }
+
+        .activeUser {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+            width: 100%;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                h3 {
+                    width: calc(100% - 10rem);
+                    text-align: center;
+
+                    .logedUser {
+                        color: rgb(2, 187, 2);
+                        margin-left: 2rem;
+                    }
+                }
+            
+                .changePass {
+                    width: 10rem;
+                    height: 1.5rem;
+                    padding: 0 0.5rem;
+                }
+    
+            }
+            
+            form {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-top: 1rem;
+                div {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 25rem;
+                    margin-bottom: 0.5rem;
+
+                    .inputText {
+                        width: 8rem;
+                        margin-left: 0rem;
+                    }
+                }
+
+                #confirmChangeP, #cancelChangeP {                
+                    width: 5rem;
+                    height: 1.5rem;
+                    margin: 1rem 4rem;
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+    }
+
+    .contactData {
+        display: none;
+
+        form {  
+            display: flex;          
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+
+            h3 {
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+    
+    .activitiesAdm {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        padding-bottom: 5rem;
+        width: 100%;
+
+        .uploader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60rem;
+            margin-top: 2rem;
+            
+            #uploader {
+                display: flex;
+                width: 100%;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    label {
+                        text-align: center;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    input {
+                        margin-bottom: 1rem;
+                        height: 1.5rem;
+                        padding: 0 0.5rem;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        margin-bottom: 2rem;
+                    }
+
+                    #uplMsj {
+                        h4 {
+                            text-align: center;
+                            height: 1rem;
+                        }
+                    }
+                }
+
+                .uploaderText {
+                    width: 30rem;
+                }
+                
+                .imagenDown {
+                    display: flex;
+                    background-color: white;
+                    justify-content: center;
+                    width: 30rem;
+                    height: 25rem;
+                    margin-left: 2rem;
+                    border: $b;                    
+                }
+            }
+
+            #upload {
+                width: 15rem;
+                margin-top: 2rem;
+            }
+
+            
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #uploader {
+        flex-direction: column;
+        align-items: center;
+
+        .imagenDown {
+            margin-right: 2rem;
+        }
+    }
+}

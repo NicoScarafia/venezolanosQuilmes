@@ -1,0 +1,115 @@
+#about {
+    padding-top: 3rem;
+
+    h2 {
+        @include HomeTitle;
+        padding-left: 6rem;
+    }
+
+    .about_subheading {
+        width: 30rem;
+        max-width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.55rem;
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    .about_content {
+        position: relative;
+
+        .about_image {
+            width: 100%;
+            height: 20rem;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .about_text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6rem;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 0.5rem;
+            padding: 1.2rem;
+            text-align: center;
+            max-width: 70%;
+            line-height: 1.6rem;
+            font-size: 1.03rem;
+            background-color: $light;
+
+        }
+
+    }
+
+
+    .about_link {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+
+        a {
+            width: 7rem;
+            background-color: $red;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: white;
+            text-align: center;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $light;
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    #about {
+        .about_content {
+            .about_text {
+                max-width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #about {
+        .about_content {
+            .about_text {
+                max-width: 95%;
+                bottom: -7rem;
+            }
+        }
+
+        .about_link {
+            margin-top: 8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #about {
+        .about_content {
+            .about_text {
+                position: unset;
+                max-width: 100%;
+            }
+        }
+
+        .about_link {
+            margin-top: 1rem;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8rem;
+    background-color: $yellow;
+    max-height: 5rem;
+    height: 4rem;
+    text-align: center;
+
+    .link-left, .link-right {
+        color: $red;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0 1.5rem;
+        transition: all 0.5s;
+        position: relative;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            bottom: 0; left: 0;
+            background-color: $blue;
+            width: 100%;    height: 0.12rem;  
+            border-radius: 0.5rem;   
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 250ms ease-in;
+        }
+        
+        &:hover {
+            color: $blue;   
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    .link-left {
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+    }
+
+    .main-logo {
+        width: 4rem;
+        margin: 0 2rem;
+    }
+
+    .login {
+        justify-self: end;
+        position: absolute;
+        right: 2rem;
+        
+        
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        display: none;
+    }
+}

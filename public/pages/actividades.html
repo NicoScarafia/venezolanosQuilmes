@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Title -->
+    <title>Somos Venezolanos en Quilmes | Home</title>
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="link-left" href="../index.html#about">Nosotros</a>
+            <a class="link-left" href="../index.html#actividades">Actividades</a>
+            <a href="/">
+                <img class="main-logo" src="../assets/logo.png" alt="Logo Somos Venezolanos en Quilmes">
+            </a>
+            <a class="link-right" href="../index.html#redes">Nuestras Redes</a>
+            <a class="link-right" href="calendar.html">Calendario</a>
+            <a class="link-right login" href="login.html">Log In</a>
+        </nav>
+
+        <!-- Mobile Navbar -->
+        <nav class="mobile_navbar">
+            <a href="/">
+                <img class="main-logo" src="../assets/logo.png" alt="Logo Somos Venezolanos en Quilmes">
+            </a>
+            <i id="mobileNavMenu" class="fa-solid fa-bars"></i>
+        </nav>
+        <div id="mobile_navlist" class="mobile_navlist translateObj">
+            <div class="list">
+                <div id="closeMobileNav" class="list-close">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="main-list">
+                    <a class="link-left" href="../index.html#about">Nosotros</a>
+                    <a class="link-left" href="#">Actividades</a>
+                    <a class="link-right" href="../index.html#redes">Nuestras Redes</a>
+                    <a class="link-right" href="calendar.html">Calendario</a>
+                </div>
+                <div class="login-list">
+                    <a class="link-right login" href="login.html">Log In</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="brand">
+        <img src="../assets/img/somosvenezolanos.jpg">
+    </div>
+
+    <a class="linkWhatsapp"href="" target="_blank">
+        <div class="whatsapp-button"> 
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+    </a>
+
+    <main id="main_actividades-page">
+
+        <h1>Actividades</h1>
+
+        <section id="actividades_page_section">
+
+            <div class="actividades_content-page">
+                
+            </div>
+
+            <div class="actividades_link-page"><a href="actividades.html">Ver Todo</a></div>
+
+            <button id="cargarMas">Cargar Mas</button>
+
+        </section>
+
+    </main>
+    
+    <footer>
+        <div>
+            <span>© Somos Venezolanos en Quilmes  |   Todos los derechos reservados.</span>
+        </div>
+        <div class="footer_contacto">
+            <h5>Contactanos</h5>
+            <ul>
+                <a href="" target="_blank"><li><i class="fa-brands fa-whatsapp"></i> Whatsapp</li></a>
+                <a href="" target="_blank"><li><i class="fa-brands fa-instagram"></i> Instagram</li></a>
+                <a href="" target="_blank"><li><i class="fa-brands fa-facebook-f"></i> Facebook</li></a>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/actividades.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

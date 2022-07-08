@@ -1,0 +1,66 @@
+#redes {
+    margin: 6rem auto;
+
+    h2 {
+        @include HomeTitle;
+        text-align: center;
+        margin: 3rem 0 1rem 0;
+    }
+
+    .redes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    a {
+        color: white;
+        padding: 0.5rem;
+        transition: 0.5s all;
+        border-radius: 0.5rem;
+        
+        i {
+            font-size: 2.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        span {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        &:hover {
+            color: $dark;
+        }
+    }
+
+    .red-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5rem 1rem;
+        min-width: 18rem;
+        border-radius: 0.5rem;
+        height: 8rem;
+        border: 0.15rem solid rgb(201, 201, 201);
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;    justify-content: center;
+        }
+    }
+    
+    .instagram{ 
+        background: #f09433; 
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );  
+    }
+
+    .facebook {
+        background:linear-gradient(120deg, #3b5998, #7fa1ea);
+    }
+}

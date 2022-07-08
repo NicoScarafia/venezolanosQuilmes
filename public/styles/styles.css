@@ -9,7 +9,6 @@
 body {
   font-family: "Signika Negative", sans-serif;
   overflow-x: hidden;
-  width: 100%;
 }
 
 a {
@@ -1385,9 +1384,6 @@ footer .footer_contacto ul {
   }
 }
 
-#main_about {
-  width: 100%;
-}
 #main_about h1 {
   text-transform: uppercase;
   color: #141720;
@@ -1447,27 +1443,6 @@ footer .footer_contacto ul {
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
-}
-#main_about .about_aliados {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-#main_about .about_aliados .inst {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
-}
-#main_about .about_aliados .inst__logos {
-  width: 10rem;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#main_about .about_aliados .inst__logos img {
-  width: 100%;
 }
 #main_about .about_comision {
   margin-top: 4rem;

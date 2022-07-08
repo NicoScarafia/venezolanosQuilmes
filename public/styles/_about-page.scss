@@ -1,7 +1,5 @@
 #main_about {
 
-    width: 100%;
-
     h1 {
         @include PageTitle;
     }
@@ -62,31 +60,6 @@
                     width: 100%;    height: 100%;
                     object-fit: cover;
                     border-radius: 0.5rem;
-                }
-            }
-        }
-    }
-
-    .about_aliados {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-
-        .inst {
-            display: grid;
-            width: 100%;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: repeat(5,1fr);
-
-            &__logos{
-                width: 10rem;
-                height: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 100%;
                 }
             }
         }
